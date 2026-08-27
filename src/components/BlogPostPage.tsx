@@ -350,7 +350,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
           <img
             src={post.featuredImage}
             alt={post.title}
-            className="w-full max-h-[460px] object-cover object-center transition-all"
+            className="w-full h-auto object-contain transition-all block"
             onError={(e) => {
               // Fallback to SVG if PNG fails
               const target = e.target as HTMLImageElement;
@@ -359,15 +359,6 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
               }
             }}
           />
-          <div className="p-3.5 bg-slate-950/90 border-t border-slate-800 flex flex-wrap items-center justify-between text-xs text-slate-300 gap-2">
-            <span className="flex items-center gap-2 text-slate-300 font-medium">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>Official Strategic Blueprint Visual</span>
-            </span>
-            <span className="text-[11px] text-slate-400 font-mono">
-              Canonical URL: /blog/{post.slug}
-            </span>
-          </div>
         </div>
 
         {/* Key Executive Takeaways Summary Box */}

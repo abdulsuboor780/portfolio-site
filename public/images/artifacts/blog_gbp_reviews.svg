@@ -30,27 +30,27 @@
   </g>
 
   <!-- Left Side: Title & Info -->
-  <g transform="translate(80, 90)">
-    <rect width="270" height="36" rx="18" fill="#14532d" stroke="#16a34a" stroke-width="1.5"/>
-    <circle cx="22" cy="18" r="6" fill="#4ade80"/>
-    <text x="38" y="23" fill="#bbf7d0" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1">GBP REPUTATION &amp; CONVERSION</text>
+  <g transform="translate(70, 75)">
+    <rect width="270" height="34" rx="17" fill="#14532d" stroke="#16a34a" stroke-width="1.5"/>
+    <circle cx="20" cy="17" r="5" fill="#4ade80"/>
+    <text x="36" y="22" fill="#bbf7d0" font-family="system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="1">GBP REPUTATION &amp; CONVERSION</text>
 
-    <text x="0" y="90" fill="#ffffff" font-family="system-ui, sans-serif" font-size="44" font-weight="900">Google Business Profile</text>
-    <text x="0" y="145" fill="url(#goldGrad)" font-family="system-ui, sans-serif" font-size="44" font-weight="900">5-Star Conversion Engine</text>
+    <text x="0" y="85" fill="#ffffff" font-family="system-ui, sans-serif" font-size="40" font-weight="900">Google Business Profile</text>
+    <text x="0" y="135" fill="url(#goldGrad)" font-family="system-ui, sans-serif" font-size="38" font-weight="900">5-Star Conversion Engine</text>
 
-    <g transform="translate(0, 195)" font-family="system-ui, sans-serif" font-size="15" fill="#cbd5e1">
+    <g transform="translate(0, 185)" font-family="system-ui, sans-serif" font-size="14.5" fill="#cbd5e1">
       <circle cx="8" cy="8" r="4" fill="#fbbf24"/>
       <text x="24" y="13">Keyword-Enriched Review Velocity &amp; Prominence</text>
       
-      <circle cx="8" cy="40" r="4" fill="#fbbf24"/>
-      <text x="24" y="45">High-Converting Geotagged Visuals &amp; Products</text>
+      <circle cx="8" cy="38" r="4" fill="#fbbf24"/>
+      <text x="24" y="43">High-Converting Geotagged Visuals &amp; Products</text>
       
-      <circle cx="8" cy="72" r="4" fill="#fbbf24"/>
-      <text x="24" y="77">100% Owner Response Rate within 24 Hours</text>
+      <circle cx="8" cy="68" r="4" fill="#fbbf24"/>
+      <text x="24" y="73">100% Owner Response Rate within 24 Hours</text>
     </g>
 
     <!-- Stat boxes -->
-    <g transform="translate(0, 315)">
+    <g transform="translate(0, 310)">
       <rect width="450" height="95" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
       <g transform="translate(25, 25)">
         <text x="0" y="24" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="30" font-weight="900">4.9 ★</text>
@@ -70,48 +70,69 @@
   </g>
 
   <!-- Right Side: Reputation Management & Customer Review Feed Card -->
-  <g transform="translate(630, 80)">
-    <rect width="490" height="515" rx="24" fill="url(#cardGrad2)" stroke="#334155" stroke-width="2" filter="url(#glow2)"/>
+  <g transform="translate(615, 65)">
+    <rect width="515" height="545" rx="24" fill="url(#cardGrad2)" stroke="#334155" stroke-width="2" filter="url(#glow2)"/>
     
     <!-- Header -->
-    <rect width="490" height="60" rx="24" fill="#0f172a"/>
-    <rect y="30" width="490" height="30" fill="#0f172a"/>
-    <text x="25" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="800">Google Customer Reviews &amp; Sentiment</text>
-    <rect x="360" y="16" width="105" height="28" rx="8" fill="#14532d"/>
-    <text x="412" y="34" fill="#4ade80" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">VERIFIED LIVE</text>
+    <rect width="515" height="55" rx="24" fill="#0f172a"/>
+    <rect y="25" width="515" height="30" fill="#0f172a"/>
+    <text x="25" y="35" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="800">Google Customer Reviews &amp; Sentiment</text>
+    <rect x="385" y="14" width="105" height="26" rx="8" fill="#14532d"/>
+    <text x="437" y="31" fill="#4ade80" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">VERIFIED LIVE</text>
 
     <!-- Review 1 -->
-    <g transform="translate(20, 75)">
-      <rect width="450" height="125" rx="14" fill="#0b1329" stroke="#1e293b" stroke-width="1"/>
-      <circle cx="35" cy="35" r="16" fill="#059669"/>
-      <text x="35" y="40" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="800" text-anchor="middle">JS</text>
-      <text x="65" y="32" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700">James Sullivan</text>
-      <text x="65" y="48" fill="#fbbf24" font-family="sans-serif" font-size="13">★★★★★</text>
-      <text x="135" y="48" fill="#64748b" font-family="sans-serif" font-size="11">2 days ago</text>
-      <text x="25" y="80" fill="#cbd5e1" font-family="sans-serif" font-size="12">"Fastest emergency AC repair service in Dallas! Found them on Google Maps and they arrived in 30 minutes."</text>
-      <rect x="25" y="94" width="130" height="20" rx="4" fill="#064e3b"/>
-      <text x="32" y="107" fill="#6ee7b7" font-family="sans-serif" font-size="10" font-weight="600">Mentioned: AC Repair</text>
+    <g transform="translate(20, 70)">
+      <rect width="475" height="135" rx="14" fill="#0b1329" stroke="#1e293b" stroke-width="1"/>
+      <circle cx="32" cy="30" r="15" fill="#059669"/>
+      <text x="32" y="35" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="800" text-anchor="middle">JS</text>
+      <text x="58" y="28" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700">James Sullivan</text>
+      <text x="58" y="44" fill="#fbbf24" font-family="sans-serif" font-size="12">★★★★★</text>
+      <text x="125" y="44" fill="#64748b" font-family="sans-serif" font-size="11">2 days ago</text>
+      
+      <!-- Multi-line wrapped quote -->
+      <text x="20" y="70" fill="#cbd5e1" font-family="sans-serif" font-size="12">
+        <tspan x="20" dy="0">"Fastest emergency AC repair service in Dallas! Found them on</tspan>
+        <tspan x="20" dy="18">Google Maps and they arrived in 30 minutes."</tspan>
+      </text>
+      
+      <rect x="20" y="102" width="130" height="20" rx="4" fill="#064e3b"/>
+      <text x="27" y="115" fill="#6ee7b7" font-family="sans-serif" font-size="10.5" font-weight="600">Mentioned: AC Repair</text>
     </g>
 
     <!-- Review 2 -->
-    <g transform="translate(20, 215)">
-      <rect width="450" height="125" rx="14" fill="#0b1329" stroke="#1e293b" stroke-width="1"/>
-      <circle cx="35" cy="35" r="16" fill="#0284c7"/>
-      <text x="35" y="40" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="800" text-anchor="middle">MR</text>
-      <text x="65" y="32" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700">Maria Rodriguez</text>
-      <text x="65" y="48" fill="#fbbf24" font-family="sans-serif" font-size="13">★★★★★</text>
-      <text x="135" y="48" fill="#64748b" font-family="sans-serif" font-size="11">1 week ago</text>
-      <text x="25" y="80" fill="#cbd5e1" font-family="sans-serif" font-size="12">"Top notch contractor! Highly recommend their furnace installation team. Professional, clean, and upfront pricing."</text>
-      <rect x="25" y="94" width="155" height="20" rx="4" fill="#0c4a6e"/>
-      <text x="32" y="107" fill="#7dd3fc" font-family="sans-serif" font-size="10" font-weight="600">Mentioned: Furnace Install</text>
+    <g transform="translate(20, 220)">
+      <rect width="475" height="135" rx="14" fill="#0b1329" stroke="#1e293b" stroke-width="1"/>
+      <circle cx="32" cy="30" r="15" fill="#0284c7"/>
+      <text x="32" y="35" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="800" text-anchor="middle">MR</text>
+      <text x="58" y="28" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700">Maria Rodriguez</text>
+      <text x="58" y="44" fill="#fbbf24" font-family="sans-serif" font-size="12">★★★★★</text>
+      <text x="125" y="44" fill="#64748b" font-family="sans-serif" font-size="11">1 week ago</text>
+      
+      <!-- Multi-line wrapped quote -->
+      <text x="20" y="70" fill="#cbd5e1" font-family="sans-serif" font-size="12">
+        <tspan x="20" dy="0">"Top notch contractor! Highly recommend their furnace</tspan>
+        <tspan x="20" dy="18">installation team. Professional, clean, and upfront pricing."</tspan>
+      </text>
+      
+      <rect x="20" y="102" width="155" height="20" rx="4" fill="#0c4a6e"/>
+      <text x="27" y="115" fill="#7dd3fc" font-family="sans-serif" font-size="10.5" font-weight="600">Mentioned: Furnace Install</text>
     </g>
 
-    <!-- Owner Response Box -->
-    <g transform="translate(20, 355)">
-      <rect width="450" height="120" rx="14" fill="#064e3b" stroke="#059669" stroke-width="1.5"/>
-      <text x="20" y="28" fill="#a7f3d0" font-family="sans-serif" font-size="12" font-weight="800">BUSINESS OWNER RESPONSE (AUTOMATED TEMPLATE):</text>
-      <text x="20" y="55" fill="#ffffff" font-family="sans-serif" font-size="12" font-style="italic">"Thank you Maria! Our certified technicians take great pride in delivering fast furnace installation and heating maintenance across the greater Dallas metro area."</text>
-      <text x="20" y="100" fill="#6ee7b7" font-family="sans-serif" font-size="11" font-weight="700">✓ Responded in 3h 12m · Positive Sentiment Confirmed</text>
+    <!-- Owner Response Box with proper multi-line wrapping -->
+    <g transform="translate(20, 370)">
+      <rect width="475" height="150" rx="14" fill="#064e3b" stroke="#059669" stroke-width="1.5"/>
+      <text x="20" y="28" fill="#a7f3d0" font-family="sans-serif" font-size="11.5" font-weight="800">BUSINESS OWNER RESPONSE (AUTOMATED TEMPLATE):</text>
+      
+      <text x="20" y="52" fill="#ffffff" font-family="sans-serif" font-size="12" font-style="italic">
+        <tspan x="20" dy="0">"Thank you Maria! Our certified technicians take great pride in</tspan>
+        <tspan x="20" dy="19">delivering fast furnace installation and heating maintenance</tspan>
+        <tspan x="20" dy="19">across the greater Dallas metro area."</tspan>
+      </text>
+      
+      <g transform="translate(20, 122)">
+        <circle cx="6" cy="6" r="4" fill="#4ade80"/>
+        <text x="18" y="10" fill="#6ee7b7" font-family="sans-serif" font-size="11" font-weight="700">Responded in 3h 12m · Positive Sentiment Confirmed</text>
+      </g>
     </g>
   </g>
 </svg>
