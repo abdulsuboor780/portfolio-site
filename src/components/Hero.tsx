@@ -10,7 +10,6 @@ import {
   MapPin, 
   ShieldCheck, 
   Zap, 
-  Upload,
   Eye,
   PhoneCall
 } from 'lucide-react';
@@ -27,16 +26,7 @@ export const Hero: React.FC<HeroProps> = ({
   onNavigateServices, 
   onNavigateCertification 
 }) => {
-  const [customPhotoUrl, setCustomPhotoUrl] = useState<string | null>(null);
-  const [isPhotoHovered, setIsPhotoHovered] = useState(false);
-
-  const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const url = URL.createObjectURL(file);
-      setCustomPhotoUrl(url);
-    }
-  };
+  const [photoError, setPhotoError] = useState<boolean>(false);
 
   return (
     <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden">
@@ -157,8 +147,6 @@ export const Hero: React.FC<HeroProps> = ({
 
             <div 
               className="relative w-full max-w-sm rounded-3xl bg-slate-900/90 border-2 border-emerald-500/40 p-4 shadow-2xl shadow-emerald-950/60 backdrop-blur-xl group"
-              onMouseEnter={() => setIsPhotoHovered(true)}
-              onMouseLeave={() => setIsPhotoHovered(false)}
             >
               {/* Top Frame Bar */}
               <div className="flex items-center justify-between pb-3 px-1 border-b border-slate-800/80">
@@ -176,12 +164,15 @@ export const Hero: React.FC<HeroProps> = ({
               {/* Picture / Avatar Container */}
               <div className="relative aspect-[4/4.5] w-full rounded-2xl bg-gradient-to-b from-slate-800 via-slate-900 to-slate-950 overflow-hidden mt-3 border border-slate-800 flex items-center justify-center">
                 
-                {customPhotoUrl ? (
-                  <img
-                    src={customPhotoUrl}
-                    alt={PERSONAL_INFO.name}
-                    className="w-full h-full object-cover"
-                  />
+                {!photoError ? (
+                  <div className="w-full h-full relative group">
+                    <img
+                      src="/images/portfolio-hero-section.jpg"
+                      alt={`${PERSONAL_INFO.name} - SEO & Local SEO Specialist`}
+                      onError={() => setPhotoError(true)}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center space-y-4 relative">
                     
@@ -208,18 +199,6 @@ export const Hero: React.FC<HeroProps> = ({
                       <p className="text-xs text-slate-300 font-medium">SEO, Local SEO & GBP Specialist</p>
                       <p className="text-[11px] text-emerald-400 font-mono font-semibold">iSkills Certified • ID: 726553</p>
                     </div>
-
-                    {/* Quick photo upload button */}
-                    <label className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/90 hover:bg-emerald-950 text-slate-300 hover:text-emerald-300 border border-slate-700 hover:border-emerald-500/50 transition-all shadow-sm">
-                      <Upload className="w-3.5 h-3.5" />
-                      <span>Change / Upload Photo</span>
-                      <input
-                        type="file"
-                        accept="image/*"
-                        onChange={handlePhotoUpload}
-                        className="hidden"
-                      />
-                    </label>
 
                   </div>
                 )}

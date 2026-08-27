@@ -2,6 +2,7 @@ import { ServicePackage, CaseStudy, BlogPost, Testimonial, FAQ, NicheInfo } from
 
 export const PERSONAL_INFO = {
   name: 'Abdul Suboor',
+  photo: '/images/portfolio-hero-section.jpg',
   title: 'SEO & Local SEO Specialist',
   tagline: 'Driving Predictable Organic Leads & Google 3-Pack Rankings for Small Businesses',
   experience: '3+ Years of Hands-On SEO & GBP Experience',
@@ -349,6 +350,7 @@ export const CERTIFICATION_DETAILS = {
   title: 'Training Certificate of Professional Mastery',
   recipient: 'Abdul Suboor',
   credentialId: '726553',
+  certificateImage: '/images/certificate-sebt-13-Abdul-Suboor.jpg',
   issueDate: 'October 01, 2024',
   trainingPeriod: 'Sept 2023 to Sept 2024',
   mentor: 'M Tanveer Nandla',

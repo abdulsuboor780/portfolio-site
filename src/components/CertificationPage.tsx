@@ -10,7 +10,6 @@ import {
   Building2, 
   Sparkles,
   ArrowRight,
-  Upload,
   Download,
   Copy,
   Check,
@@ -28,20 +27,12 @@ export const CertificationPage: React.FC<CertificationPageProps> = ({
   onNavigateContact 
 }) => {
   const [copiedId, setCopiedId] = useState(false);
-  const [customCertImg, setCustomCertImg] = useState<string | null>(null);
+  const [certImgError, setCertImgError] = useState<boolean>(false);
 
   const handleCopyId = () => {
     navigator.clipboard.writeText(CERTIFICATION_DETAILS.credentialId);
     setCopiedId(true);
     setTimeout(() => setCopiedId(false), 2000);
-  };
-
-  const handleCertUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const url = URL.createObjectURL(file);
-      setCustomCertImg(url);
-    }
   };
 
   return (
@@ -76,17 +67,18 @@ export const CertificationPage: React.FC<CertificationPageProps> = ({
             
             <div className="relative rounded-3xl bg-slate-900 border-2 border-emerald-500/40 p-3 sm:p-6 shadow-2xl shadow-emerald-950/50">
               
-              {/* Optional custom uploaded certificate or high-fidelity rendered certificate */}
-              {customCertImg ? (
-                <div className="rounded-2xl overflow-hidden border border-slate-800 relative group">
+              {/* Certificate Image Display & High-Fidelity Representation */}
+              {!certImgError ? (
+                <div className="rounded-2xl overflow-hidden border border-slate-800 relative group bg-slate-950 shadow-2xl">
                   <img
-                    src={customCertImg}
-                    alt="iSkills Certificate - Abdul Suboor"
+                    src="/images/certificate-sebt-13-Abdul-Suboor.jpg"
+                    alt={`iSkills Certificate - ${CERTIFICATION_DETAILS.recipient} (Credential ID: ${CERTIFICATION_DETAILS.credentialId})`}
+                    onError={() => setCertImgError(true)}
                     className="w-full h-auto object-contain rounded-xl"
                   />
-                  <div className="absolute top-4 right-4 bg-slate-950/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-emerald-500/40 text-xs text-emerald-400 font-bold flex items-center gap-1.5">
+                  <div className="absolute top-4 right-4 bg-slate-950/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-emerald-500/40 text-xs text-emerald-400 font-bold flex items-center gap-1.5 shadow-lg">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Uploaded Certificate Document</span>
+                    <span>Official iSkills Certificate Document</span>
                   </div>
                 </div>
               ) : (
@@ -163,21 +155,6 @@ export const CertificationPage: React.FC<CertificationPageProps> = ({
 
                 </div>
               )}
-
-              {/* Upload Certificate Image Trigger */}
-              <div className="mt-4 pt-3 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 px-2">
-                <span>Want to inspect the original high-resolution graphic?</span>
-                <label className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors">
-                  <Upload className="w-3.5 h-3.5" />
-                  <span>Upload / Replace Certificate Image</span>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={handleCertUpload}
-                    className="hidden"
-                  />
-                </label>
-              </div>
 
             </div>
 
