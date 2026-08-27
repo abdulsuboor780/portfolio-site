@@ -12,16 +12,22 @@ import {
   ArrowUp,
   Linkedin,
   Facebook,
-  ExternalLink
+  ExternalLink,
+  ChevronRight
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface FooterProps {
   onNavigate: (tab: string) => void;
+  onNavigateServiceSlug?: (slug: string) => void;
   onOpenAudit: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAudit }) => {
+export const Footer: React.FC<FooterProps> = ({ 
+  onNavigate, 
+  onNavigateServiceSlug,
+  onOpenAudit 
+}) => {
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [newsletterSubscribed, setNewsletterSubscribed] = useState(false);
 
@@ -34,6 +40,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAudit }) => {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleServiceClick = (slug: string) => {
+    if (onNavigateServiceSlug) {
+      onNavigateServiceSlug(slug);
+    } else {
+      onNavigate('services');
+    }
   };
 
   return (
@@ -78,7 +92,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAudit }) => {
                 />
                 <button
                   type="submit"
-                  className="px-5 py-3 rounded-xl font-bold text-xs bg-emerald-400 text-slate-950 hover:bg-emerald-300 transition-all shrink-0 flex items-center justify-center gap-1.5"
+                  className="px-5 py-3 rounded-xl font-bold text-xs bg-emerald-400 text-slate-950 hover:bg-emerald-300 transition-all shrink-0 flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>Get Checklist</span>
@@ -160,43 +174,65 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAudit }) => {
             </div>
           </div>
 
-          {/* Col 2: Services Directory */}
+          {/* Col 2: Services Directory (Individual Pages + Pricing) */}
           <div className="space-y-3">
-            <h5 className="font-bold text-white text-xs uppercase tracking-wider">Services & Pricing</h5>
+            <h5 className="font-bold text-white text-xs uppercase tracking-wider">Services Directory</h5>
             <ul className="space-y-2 text-xs">
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-emerald-400 transition-colors text-left font-medium">
-                  👑 Main: Micro Site + GBP ($500)
+                <button 
+                  onClick={() => onNavigate('services')} 
+                  className="hover:text-emerald-400 transition-colors text-left font-bold text-slate-200 cursor-pointer"
+                >
+                  ⚡ All Services Overview
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-emerald-400 transition-colors text-left">
+                <button 
+                  onClick={() => handleServiceClick('micro-local-site-gbp')} 
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
+                  👑 Micro Local Site + GBP ($500)
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleServiceClick('website-development')} 
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
                   🌐 Web Dev: WP/HTML/Next.js ($300+)
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-emerald-400 transition-colors text-left">
+                <button 
+                  onClick={() => handleServiceClick('cloudstack-backlinks')} 
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
                   ☁️ Cloudstack Links ($1.50/link)
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-emerald-400 transition-colors text-left">
+                <button 
+                  onClick={() => handleServiceClick('gbp-optimization')} 
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
                   📍 GBP 3-Pack ($300 / $150 mo)
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-emerald-400 transition-colors text-left">
+                <button 
+                  onClick={() => handleServiceClick('dr-as-backlinks')} 
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
                   🔗 DR & AS Backlinks (From $50)
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-emerald-400 transition-colors text-left">
-                  ⚡ Custom Pricing (WhatsApp)
-                </button>
-              </li>
-              <li>
-                <button onClick={onOpenAudit} className="hover:text-emerald-400 transition-colors text-left text-emerald-400 font-bold">
-                  Free Quick Local SEO Audit (PDF)
+                <button 
+                  onClick={() => onNavigate('pricing')} 
+                  className="hover:text-emerald-400 transition-colors text-left text-emerald-400 font-bold cursor-pointer flex items-center gap-1"
+                >
+                  <span>💎 Transparent Pricing & Plans</span>
+                  <ChevronRight className="w-3 h-3" />
                 </button>
               </li>
             </ul>
@@ -207,29 +243,39 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAudit }) => {
             <h5 className="font-bold text-white text-xs uppercase tracking-wider">Quick Navigation</h5>
             <ul className="space-y-2 text-xs">
               <li>
-                <button onClick={() => onNavigate('home')} className="hover:text-white transition-colors">
+                <button onClick={() => onNavigate('home')} className="hover:text-white transition-colors cursor-pointer">
                   Home
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('case-studies')} className="hover:text-white transition-colors">
+                <button onClick={() => onNavigate('pricing')} className="hover:text-emerald-400 transition-colors cursor-pointer font-medium">
+                  Pricing & Plans
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('case-studies')} className="hover:text-white transition-colors cursor-pointer">
                   Case Studies & Proof
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('certification')} className="hover:text-emerald-400 transition-colors flex items-center gap-1">
+                <button onClick={() => onNavigate('certification')} className="hover:text-emerald-400 transition-colors flex items-center gap-1 cursor-pointer">
                   <Award className="w-3 h-3 text-emerald-400" />
                   iSkills Certification
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('blog')} className="hover:text-white transition-colors">
+                <button onClick={() => onNavigate('blog')} className="hover:text-white transition-colors cursor-pointer">
                   SEO Blog & Knowledge Base
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('contact')} className="hover:text-white transition-colors">
+                <button onClick={() => onNavigate('contact')} className="hover:text-white transition-colors cursor-pointer">
                   Contact & Inquiries
+                </button>
+              </li>
+              <li>
+                <button onClick={onOpenAudit} className="hover:text-emerald-400 transition-colors text-left text-emerald-400 font-bold cursor-pointer">
+                  Free Local SEO Audit (PDF)
                 </button>
               </li>
             </ul>
@@ -289,7 +335,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAudit }) => {
 
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1 text-slate-400 hover:text-emerald-400 transition-colors"
+              className="inline-flex items-center gap-1 text-slate-400 hover:text-emerald-400 transition-colors cursor-pointer"
             >
               <span>Back to top</span>
               <ArrowUp className="w-3 h-3" />
