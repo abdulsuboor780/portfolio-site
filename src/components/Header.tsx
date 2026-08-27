@@ -13,7 +13,9 @@ import {
   Link2,
   DollarSign,
   ChevronRight,
-  Zap
+  Zap,
+  MessagesSquare,
+  FileText
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
@@ -35,8 +37,9 @@ export const Header: React.FC<HeaderProps> = ({
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(true);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,13 +60,30 @@ export const Header: React.FC<HeaderProps> = ({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const handleMouseEnterDropdown = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
+    setServicesDropdownOpen(true);
+  };
+
+  const handleMouseLeaveDropdown = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    hoverTimeoutRef.current = setTimeout(() => {
+      setServicesDropdownOpen(false);
+    }, 250);
+  };
+
   const serviceSubLinks = [
     {
       slug: 'micro-local-site-gbp',
       name: 'Turnkey Micro Local Site + GBP',
-      badge: '👑 Flagship ($500)',
+      badge: '👑 Flagship ($500/mo)',
       icon: MapPin,
-      desc: '1-Service + 1-City local client ranking engine',
+      desc: 'Monthly Local SEO & 3-Pack rank expansion (6-12 mo)',
     },
     {
       slug: 'website-development',
@@ -78,6 +98,20 @@ export const Header: React.FC<HeaderProps> = ({
       badge: '☁️ $1.50/link',
       icon: Cloud,
       desc: 'High-power AWS, Google Cloud, Azure & Oracle',
+    },
+    {
+      slug: 'forum-backlinks',
+      name: 'Relevant Forum Backlinks',
+      badge: '💬 $2 = 3 Links',
+      icon: MessagesSquare,
+      desc: 'Active niche communities, aged manual accounts',
+    },
+    {
+      slug: 'blog-comments',
+      name: 'Blog Comment Backlinks',
+      badge: '📝 $2 = 4 Links',
+      icon: FileText,
+      desc: 'Strict low OBL, high authority niche blogs',
     },
     {
       slug: 'gbp-optimization',
@@ -175,8 +209,8 @@ export const Header: React.FC<HeaderProps> = ({
             <div 
               className="relative" 
               ref={dropdownRef}
-              onMouseEnter={() => setServicesDropdownOpen(true)}
-              onMouseLeave={() => setServicesDropdownOpen(false)}
+              onMouseEnter={handleMouseEnterDropdown}
+              onMouseLeave={handleMouseLeaveDropdown}
             >
               <div className="flex items-center">
                 <button
@@ -193,82 +227,87 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
               </div>
 
-              {/* Dropdown Menu */}
+              {/* Dropdown Menu with Hover Bridge Container */}
               {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-950 border border-slate-800 rounded-2xl p-2.5 shadow-2xl shadow-black/80 z-50 backdrop-blur-xl animate-in fade-in slide-in-from-top-2 duration-150">
-                  
-                  {/* All Services Overview Link */}
-                  <button
-                    onClick={() => handleNavClick('services')}
-                    className="w-full p-2.5 rounded-xl hover:bg-slate-900 text-left transition-colors flex items-center justify-between group cursor-pointer border border-transparent hover:border-emerald-500/30"
-                  >
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-                        <Layers className="w-4 h-4" />
+                <div 
+                  className="absolute top-full left-0 pt-2 w-88 z-50 animate-in fade-in slide-in-from-top-2 duration-150"
+                  onMouseEnter={handleMouseEnterDropdown}
+                  onMouseLeave={handleMouseLeaveDropdown}
+                >
+                  <div className="bg-slate-950/95 border border-slate-800 rounded-2xl p-2.5 shadow-2xl shadow-black/90 backdrop-blur-xl max-h-[80vh] overflow-y-auto">
+                    {/* All Services Overview Link */}
+                    <button
+                      onClick={() => handleNavClick('services')}
+                      className="w-full p-2.5 rounded-xl hover:bg-slate-900 text-left transition-colors flex items-center justify-between group cursor-pointer border border-transparent hover:border-emerald-500/30"
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <div className="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                          <Layers className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <span className="font-bold text-xs text-white group-hover:text-emerald-400 transition-colors block">
+                            All Services Overview
+                          </span>
+                          <span className="text-[11px] text-slate-400">
+                            Complete solutions & ROI calculator
+                          </span>
+                        </div>
                       </div>
-                      <div>
-                        <span className="font-bold text-xs text-white group-hover:text-emerald-400 transition-colors block">
-                          All Services Overview
-                        </span>
-                        <span className="text-[11px] text-slate-400">
-                          Complete solutions & ROI calculator
-                        </span>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all" />
-                  </button>
+                      <ChevronRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all" />
+                    </button>
 
-                  <div className="my-1.5 border-t border-slate-800/80" />
+                    <div className="my-1.5 border-t border-slate-800/80" />
 
-                  {/* Individual Dedicated Service Pages */}
-                  <div className="space-y-1">
-                    {serviceSubLinks.map((item) => {
-                      const SubIcon = item.icon;
-                      const isSubActive = activeServiceSlug === item.slug;
-                      return (
-                        <button
-                          key={item.slug}
-                          onClick={() => handleServiceSelect(item.slug)}
-                          className={`w-full p-2 rounded-xl text-left transition-colors flex items-start gap-2.5 cursor-pointer ${
-                            isSubActive
-                              ? 'bg-emerald-500/15 border border-emerald-500/40 text-emerald-300'
-                              : 'hover:bg-slate-900 text-slate-300 hover:text-white'
-                          }`}
-                        >
-                          <div className="w-7 h-7 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
-                            <SubIcon className="w-3.5 h-3.5" />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center justify-between gap-1">
-                              <span className="font-bold text-xs text-white truncate">
-                                {item.name}
-                              </span>
-                              <span className="text-[10px] font-bold text-emerald-400 shrink-0">
-                                {item.badge}
-                              </span>
+                    {/* Individual Dedicated Service Pages */}
+                    <div className="space-y-1">
+                      {serviceSubLinks.map((item) => {
+                        const SubIcon = item.icon;
+                        const isSubActive = activeServiceSlug === item.slug;
+                        return (
+                          <button
+                            key={item.slug}
+                            onClick={() => handleServiceSelect(item.slug)}
+                            className={`w-full p-2 rounded-xl text-left transition-colors flex items-start gap-2.5 cursor-pointer ${
+                              isSubActive
+                                ? 'bg-emerald-500/15 border border-emerald-500/40 text-emerald-300'
+                                : 'hover:bg-slate-900 text-slate-300 hover:text-white'
+                            }`}
+                          >
+                            <div className="w-7 h-7 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
+                              <SubIcon className="w-3.5 h-3.5" />
                             </div>
-                            <p className="text-[11px] text-slate-400 truncate">
-                              {item.desc}
-                            </p>
-                          </div>
-                        </button>
-                      );
-                    })}
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center justify-between gap-1">
+                                <span className="font-bold text-xs text-white truncate">
+                                  {item.name}
+                                </span>
+                                <span className="text-[10px] font-bold text-emerald-400 shrink-0">
+                                  {item.badge}
+                                </span>
+                              </div>
+                              <p className="text-[11px] text-slate-400 truncate">
+                                {item.desc}
+                              </p>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    <div className="my-1.5 border-t border-slate-800/80" />
+
+                    {/* Pricing Page Link in Dropdown */}
+                    <button
+                      onClick={() => handleNavClick('pricing')}
+                      className="w-full p-2 rounded-xl bg-slate-900/60 hover:bg-slate-900 text-left transition-colors flex items-center justify-between text-xs font-semibold text-emerald-400 cursor-pointer"
+                    >
+                      <span className="flex items-center gap-1.5">
+                        <DollarSign className="w-3.5 h-3.5" />
+                        <span>Transparent Pricing & Plans</span>
+                      </span>
+                      <ChevronRight className="w-3.5 h-3.5" />
+                    </button>
                   </div>
-
-                  <div className="my-1.5 border-t border-slate-800/80" />
-
-                  {/* Pricing Page Link in Dropdown */}
-                  <button
-                    onClick={() => handleNavClick('pricing')}
-                    className="w-full p-2 rounded-xl bg-slate-900/60 hover:bg-slate-900 text-left transition-colors flex items-center justify-between text-xs font-semibold text-emerald-400 cursor-pointer"
-                  >
-                    <span className="flex items-center gap-1.5">
-                      <DollarSign className="w-3.5 h-3.5" />
-                      <span>Transparent Pricing & Plans</span>
-                    </span>
-                    <ChevronRight className="w-3.5 h-3.5" />
-                  </button>
                 </div>
               )}
             </div>
@@ -325,7 +364,7 @@ export const Header: React.FC<HeaderProps> = ({
                   : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
               }`}
             >
-              SEO Insights
+              Blog
             </button>
 
             {/* Contact */}
@@ -342,40 +381,39 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </nav>
 
-          {/* Action CTAs */}
-          <div className="hidden sm:flex items-center gap-2.5">
-            <a
-              href={`https://wa.me/923365336008?text=${encodeURIComponent('Hi Abdul, I saw your portfolio and want to discuss SEO/Local SEO for my business.')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 transition-all hover:scale-[1.02]"
-              id="header-whatsapp-cta"
-            >
-              <MessageCircle className="w-3.5 h-3.5 fill-emerald-400/20 text-emerald-400" />
-              <span>WhatsApp</span>
-            </a>
-
+          {/* Action Buttons */}
+          <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={onOpenAuditModal}
               id="header-free-audit-btn"
-              className="relative group overflow-hidden inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 shadow-md shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:scale-[1.03] active:scale-[0.98] transition-all cursor-pointer"
+              className="px-4 py-2 rounded-full text-xs font-bold bg-slate-900 hover:bg-slate-800 text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/60 transition-all flex items-center gap-1.5 shadow-sm cursor-pointer"
             >
-              <span className="relative z-10 flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 animate-spin text-slate-950 [animation-duration:4s]" />
-                Free SEO Audit
-              </span>
-              <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Free GBP Audit</span>
             </button>
+
+            <a
+              href={`https://wa.me/923365336008?text=${encodeURIComponent('Hi Abdul Suboor, I would like to discuss Local SEO & rankings for my business.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              id="header-whatsapp-btn"
+              className="px-4 py-2 rounded-full text-xs font-bold bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 transition-all flex items-center gap-1.5 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 cursor-pointer font-sans"
+            >
+              <MessageCircle className="w-3.5 h-3.5 fill-slate-950" />
+              <span>WhatsApp Me</span>
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden">
+          {/* Mobile Hamburger Toggle */}
+          <div className="flex lg:hidden items-center gap-2">
             <button
               onClick={onOpenAuditModal}
-              className="sm:hidden px-2.5 py-1.5 rounded-lg text-[11px] font-bold bg-emerald-400 text-slate-950 cursor-pointer"
+              className="px-3 py-1.5 rounded-full text-xs font-bold bg-slate-900 text-emerald-400 border border-emerald-500/30 flex items-center gap-1"
             >
-              Audit
+              <Sparkles className="w-3 h-3" />
+              <span>Audit</span>
             </button>
+
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer"
@@ -524,10 +562,10 @@ export const Header: React.FC<HeaderProps> = ({
                   setMobileMenuOpen(false);
                   onOpenAuditModal();
                 }}
-                className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-emerald-400 text-slate-950 text-xs font-extrabold cursor-pointer"
+                className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-emerald-500 text-slate-950 text-xs font-bold"
               >
                 <Sparkles className="w-4 h-4" />
-                Free Audit
+                Audit
               </button>
             </div>
           </div>
@@ -536,3 +574,4 @@ export const Header: React.FC<HeaderProps> = ({
     </header>
   );
 };
+

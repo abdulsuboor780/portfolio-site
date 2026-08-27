@@ -51,97 +51,97 @@ export const DETAILED_SERVICES: Record<string, ServiceDetail> = {
     id: 'micro-local-site-gbp',
     slug: 'micro-local-site-gbp',
     name: 'Turnkey Micro Local Site + Google Business Profile',
-    badge: '👑 Flagship Main Service',
+    badge: '👑 Flagship Monthly Service',
     price: '$500',
-    period: 'one-time turnkey setup (1 Service + 1 Location)',
-    tagline: 'The complete local client-acquisition engine: A lightning-fast, high-converting micro site engineered for 1 specific service & 1 target city, integrated with full Google 3-Pack ranking architecture.',
-    metaTitle: 'Turnkey Micro Local Website & GBP 3-Pack Funnel ($500) | Abdul Suboor',
-    metaDescription: 'Get a high-converting 1-service, 1-location local business micro website and complete Google Maps 3-Pack optimization for $500 turnkey. Sub-second speed and local schema graph included.',
+    period: '/ month (6 to 12 Months Contract)',
+    tagline: 'Comprehensive monthly Local SEO service: We engineer a high-converting micro local site for 1 specific service & 1 target city in Month 1, then continuously drive Google 3-Pack rankings, geo-grid proximity, citation velocity, and inbound phone calls across a 6–12 month contract.',
+    metaTitle: 'Turnkey Micro Local Site & GBP Local SEO ($500/mo) | Abdul Suboor',
+    metaDescription: 'Dominant monthly local SEO service: Custom 1-service, 1-city micro funnel built in Month 1 paired with continuous Google Business Profile 3-Pack optimization, Geo-Grid expansion, and link velocity on a 6-12 month contract.',
     canonicalUrl: 'https://abdulsuboor.com/services/micro-local-site-gbp',
     focusKeywords: [
+      'monthly local seo service',
       'micro local website design',
       'google business profile ranking service',
-      'local seo funnel for contractors',
-      'google 3 pack optimization',
-      'local lead generation website'
+      'local seo contract for contractors',
+      'google 3 pack optimization monthly'
     ],
     heroStats: [
-      { label: 'Turnkey Investment', value: '$500 Flat' },
-      { label: 'Delivery Turnaround', value: '7-10 Days' },
-      { label: 'Mobile PageSpeed', value: '98 - 100/100' },
+      { label: 'Monthly Retainer', value: '$500 / mo' },
+      { label: 'Contract Term', value: '6 - 12 Months' },
+      { label: 'Month 1 Launch', value: '7 - 10 Days' },
       { label: 'Target Focus', value: '1 Service + 1 City' },
     ],
     executiveSummary:
-      'Most local business websites fail because they are bloated with 30 generic pages, slow themes, and buried contact numbers. The Turnkey Micro Local Site is an ultra-focused conversion machine built strictly around your most profitable service in your primary service city. We combine sub-second mobile code, rich LocalBusiness Schema Graph, click-to-call funnels, and full Google Business Profile 3-Pack optimization to capture high-intent local homeowners and clients actively searching for emergency or scheduled services.',
+      'True Google Maps #1 rankings and local market domination cannot be achieved with a one-time setup alone; Google requires continuous proximity reinforcement, citation authority, review acquisition momentum, and geo-grid expansion. Our $500/month Local SEO retainer provides an end-to-end client-acquisition partnership: In Month 1, we build and launch your custom sub-second 1-service, 1-location micro site with full GBP category architecture and Local Schema Graph. Across Months 2 through 12, we execute aggressive ongoing monthly local ranking sprints, spam competitor removals, localized citation drops, and ranking defense to turn local search traffic into consistent high-ticket inbound phone calls.',
     whyChooseThis: {
-      heading: 'Why the 1-Service + 1-Location Model Beats Traditional $3,000 Agency Websites',
+      heading: 'Why a Structured 6–12 Month Local SEO Retainer Dominates Traditional Agency Models',
       points: [
         {
-          title: 'Laser-Focused Topical & Geo-Entity Relevance',
-          desc: 'Google ranks hyper-specific relevance over generic websites. By dedicating the entire domain structure, H1-H3 hierarchy, schema, and content to ONE profitable service (e.g. "Bathroom Remodeling in Dallas" or "Emergency AC Repair in Phoenix"), Google immediately categorizes your business as the premier authority.',
-          icon: 'Target',
-        },
-        {
-          title: 'Sub-1-Second Mobile Load Times',
-          desc: 'Built with clean semantic code, eliminating bulky page builders and heavy plugins. Homeowners needing immediate assistance get an instant-loading page with zero friction.',
+          title: 'Month 1 Turnkey Micro Asset Launch',
+          desc: 'We immediately build your high-speed, sub-second conversion landing machine dedicated strictly to 1 profitable service in 1 prime location, connected to your Google Business Profile and Local Schema Graph.',
           icon: 'Zap',
         },
         {
-          title: 'Direct Click-to-Call & WhatsApp Conversion Funnel',
-          desc: 'Every element is engineered for phone calls and direct WhatsApp chats. Sticky mobile call bars, floating chat prompts, and friction-free inquiry forms turn traffic into paying jobs.',
-          icon: 'PhoneCall',
+          title: 'Continuous Geo-Grid Proximity Expansion',
+          desc: 'Month after month, we push your ranking radius outward into neighboring zip codes and high-value suburbs, ensuring your business appears in the Google 3-Pack across the entire metropolitan area.',
+          icon: 'MapPin',
         },
         {
-          title: 'Complete Google Business Profile 3-Pack Synergy',
-          desc: 'Your micro site and GBP listing are bi-directionally synchronized with identical NAP data, geo-coordinates, service categories, and embedded Google Maps entities.',
-          icon: 'MapPin',
+          title: 'Active Google Spam Competitor Removal',
+          desc: 'We continuously audit the local 3-Pack for fake listings, keyword-stuffed business names, and lead-gen scams, submitting verified Google Redressals to open up top ranking positions for your real business.',
+          icon: 'ShieldCheck',
+        },
+        {
+          title: 'Predictable Inbound Phone Leads & Direct WhatsApp Line',
+          desc: 'You work directly with an iSkills Certified SEO Specialist (Abdul Suboor), receiving transparent monthly geo-grid scans, call analytics, and VIP WhatsApp communication throughout the 6-12 month partnership.',
+          icon: 'PhoneCall',
         },
       ],
     },
     methodologySteps: [
       {
-        step: 'Phase 1',
-        title: 'High-Intent Keyword & Geo-Competitor Research',
-        description: 'We audit your top 3 local Google 3-Pack competitors, identify the highest-converting commercial search terms, and map out the exact primary and secondary GBP categories.',
-        timeframe: 'Days 1 - 2',
-        deliverables: ['Competitor Geo-Grid baseline scan', 'Target commercial keyword cluster', 'Site architecture roadmap'],
+        step: 'Month 1',
+        title: 'Micro Site Funnel Build & Full GBP Architecture Launch',
+        description: 'We audit your local competitors, build your custom sub-second micro site for 1 service & 1 city, implement full LocalBusiness Schema Graph, overhaul your Google Business Profile categories, and deploy the initial 30 high-authority local citations.',
+        timeframe: 'Days 1 - 10 (Sprint 1)',
+        deliverables: ['Custom responsive micro funnel', 'Fully optimized GBP listing', 'Validated Schema Graph', 'Initial 30 Local Citation spreadsheet'],
       },
       {
-        step: 'Phase 2',
-        title: 'Micro Funnel Development & High-Speed Build',
-        description: 'We build your responsive, mobile-first micro site featuring clean layout, high-contrast CTA buttons, trust badges, verified reviews, and customer before/after gallery integration.',
-        timeframe: 'Days 3 - 5',
-        deliverables: ['Complete responsive micro site', 'Sub-second PageSpeed optimization', 'Click-to-call & WhatsApp routing'],
+        step: 'Months 2 - 3',
+        title: 'Geo-Grid Proximity Sprints & Competitor Redressals',
+        description: 'We run baseline 10x10 Geo-Grid ranking scans, identify proximity weak spots, publish localized geo-signals, and file Google Redressal complaints against fake or spam competitor profiles.',
+        timeframe: 'Months 2 - 3',
+        deliverables: ['Geo-Grid heatmap ranking scan', 'Spam competitor removal log', 'Weekly GBP localized posts & Q&A seeding'],
       },
       {
-        step: 'Phase 3',
-        title: 'Advanced Local Schema Graph & On-Page SEO',
-        description: 'We write and validate custom JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, Offer, and Review graphs) to feed Google search spiders structured business entity data.',
-        timeframe: 'Days 6 - 7',
-        deliverables: ['Custom validated Schema Graph', 'Google Search Console & GA4 setup', 'Meta titles and OpenGraph tags'],
+        step: 'Months 4 - 6',
+        title: 'Citation Velocity, Review Acceleration & Authority Building',
+        description: 'We deploy recurring monthly citation drops, enhance review velocity with our conversion blueprint, and build localized entity signals to solidify top 3-Pack placement across target search keywords.',
+        timeframe: 'Months 4 - 6',
+        deliverables: ['Monthly citation tier updates', 'Review velocity tracking', 'Mid-term contract performance review'],
       },
       {
-        step: 'Phase 4',
-        title: 'GBP Overhaul & 30 High-Authority Local Citations',
-        description: 'We optimize your Google Business Profile with geo-tagged images, keyword-rich service menus, and submit 30 top localized citations with 100% NAP consistency.',
-        timeframe: 'Days 8 - 10',
-        deliverables: ['Fully optimized GBP listing', '30 Local Citation spreadsheet with credentials', '30-day ranking tracker access'],
+        step: 'Months 7 - 12',
+        title: 'Market Radius Domination & Ongoing Ranking Defense',
+        description: 'We scale your proximity coverage to surrounding suburbs, defend #1 positions against aggressive competitors, and optimize conversion rates to maximize inbound phone calls and closed client deals.',
+        timeframe: 'Months 7 - 12',
+        deliverables: ['Expanded suburb ranking footprint', 'Monthly call & conversion logs', 'Annual market dominance report'],
       },
     ],
     detailedDeliverables: [
       {
-        category: 'Micro Website Assets',
+        category: 'Month 1: Micro Funnel & Technical Foundation',
         items: [
           'Custom mobile-responsive 1-service, 1-location landing funnel',
-          'Ultra-fast load time (< 1.0 second on 4G mobile)',
+          'Ultra-fast load time (< 0.8 second on 4G mobile)',
           'High-converting Click-to-Call header & sticky mobile bottom bar',
           'Instant WhatsApp chat routing widget integration',
           'Interactive contact form with instant email notification',
-          'Customer before & after photo showcase / review integration',
+          'Customer before & after photo showcase / verified review integration',
         ],
       },
       {
-        category: 'Local SEO & Schema Architecture',
+        category: 'Month 1: Local SEO & Schema Architecture',
         items: [
           'Comprehensive LocalBusiness & GeoCoordinates Schema Graph',
           'Semantic H1, H2, H3 hierarchy optimized for commercial queries',
@@ -151,22 +151,22 @@ export const DETAILED_SERVICES: Record<string, ServiceDetail> = {
         ],
       },
       {
-        category: 'Google Business Profile Domination',
+        category: 'Monthly (Months 2–12): GBP & Geo-Grid Domination',
         items: [
-          'Primary & Secondary category selection based on geo-grid data',
-          'Optimized 750-character business bio with localized keyword density',
-          'Complete Services and Products menu structure with pricing',
-          'Geo-tagged metadata embedded into business and project photos',
-          'Review generation blueprint & customer response templates',
+          'Monthly Geo-Grid 10x10 proximity scans tracking keyword rank improvements',
+          'Ongoing spam competitor audits and Google Redressal filing',
+          'Weekly geo-tagged photo uploads and localized GBP promotional posts',
+          'Local Q&A seeding addressing high-intent customer purchase questions',
+          'Review generation blueprint & customer response guidance',
         ],
       },
       {
-        category: 'Off-Page & Authority Boost',
+        category: 'Monthly (Months 2–12): Authority, Citations & Support',
         items: [
-          '30 High-DA local directory and citation submissions',
-          '100% Exact Name, Address, and Phone (NAP) synchronization',
-          'Full Excel report with live citation URLs and login credentials',
-          '30-Day post-launch ranking check-in with Abdul Suboor',
+          'Monthly local citation velocity drops to maintain fresh NAP signals',
+          'Ongoing 100% NAP synchronization across local directories',
+          'Direct VIP WhatsApp access with Abdul Suboor throughout the contract',
+          'Monthly transparent executive ranking & phone call report',
         ],
       },
     ],
@@ -209,30 +209,30 @@ export const DETAILED_SERVICES: Record<string, ServiceDetail> = {
       },
     ],
     customPricingNote:
-      'Need to target multiple suburbs or expand to 3-5 service silos? Message directly on WhatsApp for tailored multi-location expansion quotes.',
-    relatedServiceSlugs: ['cloudstack-backlinks', 'gbp-optimization', 'dr-as-backlinks'],
+      'Need to target multiple service locations or manage a franchise with multiple Google Business Profiles? Message directly on WhatsApp for custom multi-location retainer agreements.',
+    relatedServiceSlugs: ['gbp-optimization', 'cloudstack-backlinks', 'forum-backlinks', 'blog-comments', 'dr-as-backlinks'],
     relatedCaseStudyId: 'elite-kitchen-bath',
     relatedBlogSlug: 'how-to-rank-in-google-map-3-pack',
     faqs: [
       {
-        question: 'What is included in the $500 Turnkey Micro Local Site package?',
+        question: 'Why is this a monthly Local SEO service with a 6–12 month contract?',
         answer:
-          'Everything you need to capture local clients: A custom-coded, ultra-fast 1-service + 1-location micro site, complete Google Business Profile 3-pack optimization, LocalBusiness Schema markup, click-to-call and WhatsApp lead funnels, and 30 top local NAP citations.',
+          'Local SEO and Google Maps 3-Pack proximity algorithms are dynamic and continuous. A one-time setup helps, but maintaining #1 rankings against active local competitors, expanding your ranking radius across all zip codes, building citation velocity, and removing spam listings requires steady monthly execution. A 6 to 12-month agreement ensures lasting market dominance and maximum ROI.',
       },
       {
-        question: 'Why only 1 service and 1 location?',
+        question: 'What is included in Month 1 vs. subsequent months?',
         answer:
-          'Search engines reward hyper-specific relevance. When a homeowner searches "emergency water heater repair in Dallas", Google prefers a website completely dedicated to that exact service in that exact city rather than a generic multi-purpose site. For multi-service businesses, we build modular silos at custom rates.',
+          'In Month 1, we build and deploy your entire turnkey foundation: a custom sub-second 1-service, 1-city micro site, complete Google Business Profile optimization, Local Schema graph, and 30 top citations. In Months 2 through 12, we focus on ongoing monthly ranking sprints: Geo-Grid scans, spam competitor redressals, localized GBP content/posts, monthly citation drops, review velocity coaching, and ranking defense.',
       },
       {
-        question: 'Do I need to pay monthly retainer fees?',
+        question: 'Why only 1 service and 1 location on the initial micro site?',
         answer:
-          'No! The $500 package is a one-time turnkey investment. You own the website, code, citations, and profile completely with zero ongoing mandatory fees. Optional monthly GBP management is available for $150/month if desired.',
+          'Google algorithms reward hyper-focused topical and geographical entity relevance. Dedicating your micro site and GBP synchronization strictly to your most profitable service in your primary city creates instant authority. If you need multi-location or multi-service expansions, we can add custom silo modules as your contract progresses.',
       },
       {
-        question: 'How fast can this be delivered?',
+        question: 'How do I track progress and results during the contract?',
         answer:
-          'Standard turnaround is 7 to 10 business days from the moment we receive your business details, target city, and service focus.',
+          'Every month, you receive a transparent performance report featuring visual 10x10 Geo-Grid ranking heatmaps, organic keyword rankings, inbound call trends, and live proof of all work completed. You also have direct VIP access to Abdul Suboor via WhatsApp.',
       },
     ],
   },
@@ -997,7 +997,7 @@ export const DETAILED_SERVICES: Record<string, ServiceDetail> = {
     ],
     customPricingNote:
       'Need a customized multi-month backlink sprint for a portfolio of client websites? Message Abdul directly on WhatsApp for agency bulk pricing.',
-    relatedServiceSlugs: ['micro-local-site-gbp', 'cloudstack-backlinks', 'gbp-optimization'],
+    relatedServiceSlugs: ['forum-backlinks', 'blog-comments', 'cloudstack-backlinks', 'micro-local-site-gbp'],
     relatedCaseStudyId: 'elite-kitchen-bath',
     relatedBlogSlug: 'advanced-schema-markup-local-seo',
     faqs: [
@@ -1015,6 +1015,404 @@ export const DETAILED_SERVICES: Record<string, ServiceDetail> = {
         question: 'Do you guarantee a live URL report?',
         answer:
           'Yes, every single order includes a transparent spreadsheet containing all live backlink URLs, anchor texts, and verified metrics.',
+      },
+    ],
+  },
+
+  'forum-backlinks': {
+    id: 'forum-backlinks',
+    slug: 'forum-backlinks',
+    name: 'Relevant Forum Backlinks',
+    badge: '💬 Niche Community Authority',
+    price: '$2',
+    period: 'for 3 links ($2 = 3 links package)',
+    unitPrice: 0.6667,
+    unitLabel: '3 Forum Links ($2)',
+    tagline: 'Build high-trust contextual backlinks placed inside active, niche-relevant forum threads and communities with natural anchors and zero automated spam.',
+    metaTitle: 'Relevant Forum Backlinks ($2 = 3 Links) | Abdul Suboor',
+    metaDescription: 'High-authority, contextually relevant forum backlinks for $2 = 3 links. 100% manual participation in niche communities with aged accounts and live URL reports.',
+    canonicalUrl: 'https://abdulsuboor.com/services/forum-backlinks',
+    focusKeywords: [
+      'relevant forum backlinks',
+      'niche forum link building',
+      'contextual forum profile backlinks',
+      'cheap high quality forum links',
+      'white hat forum backlink service'
+    ],
+    heroStats: [
+      { label: 'Package Price', value: '$2 = 3 Links' },
+      { label: 'Work Method', value: '100% Manual' },
+      { label: 'Account Age', value: 'Aged Natural' },
+      { label: 'Delivery Time', value: '3 - 5 Days' },
+    ],
+    executiveSummary:
+      'Search engine algorithms place immense weight on brand mentions and contextual link signals originating from genuine user communities. Our Relevant Forum Backlink service places your target URLs inside active, niche-matched discussion threads across real industry forums. We use aged, trusted community accounts to post meaningful, value-adding contributions. Every link is placed naturally in context or signature, providing a natural balance of topical relevance, referral signals, and link equity with zero bot spam.',
+    whyChooseThis: {
+      heading: 'Why Handcrafted Niche Forum Links Outperform Automated Link Tools',
+      points: [
+        {
+          title: '100% Niche & Topical Relevance',
+          desc: 'We match your business with active forums in your specific vertical (home services, health, technology, real estate, finance, e-commerce, and more) to maximize Google entity signals.',
+          icon: 'Target',
+        },
+        {
+          title: 'Aged, High-Trust Discussion Accounts',
+          desc: 'Links are published using established profiles with natural posting histories and community reputation, ensuring high post survival rates and zero instant deletions.',
+          icon: 'ShieldCheck',
+        },
+        {
+          title: 'Manual Contextual Discussion Contributions',
+          desc: 'No generic one-line automated spam. Every post is written manually to address the actual thread conversation while smoothly embedding your target link.',
+          icon: 'MessageCircle',
+        },
+        {
+          title: 'Transparent Live URL Spreadsheet',
+          desc: 'You receive a complete Excel / Google Sheet report with exact URLs to active discussions, thread titles, anchor texts, and landing page URLs.',
+          icon: 'FileText',
+        },
+      ],
+    },
+    methodologySteps: [
+      {
+        step: 'Phase 1',
+        title: 'Niche Community Scouting & Thread Identification',
+        description: 'We scan and identify active, indexed forum discussions in your specific industry niche with established discussion activity.',
+        timeframe: 'Day 1',
+        deliverables: ['Niche forum targets', 'Anchor text mapping', 'Target URL checklist'],
+      },
+      {
+        step: 'Phase 2',
+        title: 'Manual Post Drafting & Contextual Insertion',
+        description: 'Our team crafts genuine, constructive responses tailored to each active conversation, naturally weaving your anchor text and target page URL into the discussion.',
+        timeframe: 'Days 2 - 3',
+        deliverables: ['Handcrafted forum contributions', 'Contextual anchor embedding', 'Profile signature alignment'],
+      },
+      {
+        step: 'Phase 3',
+        title: 'Verification, Link Checks & Reporting',
+        description: 'We verify that every post is live, indexable, and accessible to search spiders, compiling the full live URL verification spreadsheet.',
+        timeframe: 'Days 4 - 5',
+        deliverables: ['Live URL Google Sheet report', 'Thread indexation verification', 'WhatsApp delivery notification'],
+      },
+    ],
+    detailedDeliverables: [
+      {
+        category: 'Forum Backlink Quality Controls',
+        items: [
+          '3 Contextual Forum Links for just $2 ($0.66 per link)',
+          '100% Manual white-hat posting (Zero GSA, XRumer, or bot tools)',
+          'Aged forum profiles with natural history and trust scores',
+          'Industry-specific forum communities matching your exact niche',
+          'Natural mix of branded, generic, and topical anchor texts',
+          'Permanent links passing continuous referral signals',
+        ],
+      },
+      {
+        category: 'Reporting & Verification',
+        items: [
+          'Full Excel / Google Sheet with live thread URLs',
+          'Anchor text and target destination URL log',
+          'Forum platform names and thread categories',
+          'Direct customer support on WhatsApp for custom anchor directions',
+        ],
+      },
+    ],
+    nicheApplications: [
+      {
+        niche: 'Home Remodeling & Contractors',
+        icon: 'Hammer',
+        benefit: 'Target active DIY, homeowner, and renovation forum threads.',
+        exampleKeyword: 'home improvement & roofing forums',
+      },
+      {
+        niche: 'Health, Dental & Wellness',
+        icon: 'Stethoscope',
+        benefit: 'Participate in patient advice, wellness, and dental care discussions.',
+        exampleKeyword: 'health & wellness community forums',
+      },
+      {
+        niche: 'Tech, SaaS & AI Automations',
+        icon: 'Cpu',
+        benefit: 'Reach developers, tech enthusiasts, and business software buyers.',
+        exampleKeyword: 'technology & software discussion boards',
+      },
+      {
+        niche: 'E-commerce & Consumer Products',
+        icon: 'Globe',
+        benefit: 'Drive direct referral buyers and category search relevance.',
+        exampleKeyword: 'product review & consumer forums',
+      },
+    ],
+    pricingOptions: [
+      {
+        tier: 'Forum Starter (3 Links)',
+        links: '3 Forum Links',
+        price: '$2',
+        features: [
+          '3 Contextual Forum Links ($2)',
+          '100% Niche-Relevant Threads',
+          'Aged Account Placement',
+          'Full Live URL Report Sheet',
+          '3 - 5 Day Turnaround',
+        ],
+      },
+      {
+        tier: 'Forum Growth (15 Links)',
+        links: '15 Forum Links',
+        price: '$10',
+        popular: true,
+        features: [
+          '15 Contextual Forum Links ($10)',
+          'Diverse Niche Communities',
+          'Natural Drip-Fed Delivery',
+          'Target Anchor Diversification',
+          'Complete Spreadsheet Report',
+        ],
+      },
+      {
+        tier: 'Forum Power (30 Links)',
+        links: '30 Forum Links',
+        price: '$20',
+        features: [
+          '30 Contextual Forum Links ($20)',
+          'Broad Authority Forum Reach',
+          'High Indexation Signal Rate',
+          'Priority WhatsApp Turnaround',
+          'Detailed Anchor Log Sheet',
+        ],
+      },
+      {
+        tier: 'Forum Max Stack (60 Links)',
+        links: '60 Forum Links',
+        price: '$40',
+        features: [
+          '60 Contextual Forum Links ($40)',
+          'Maximum Topical Authority Push',
+          'Multi-Tier Community Exposure',
+          'Full Live URL Verification',
+          'VIP Support with Abdul Suboor',
+        ],
+      },
+    ],
+    customPricingNote:
+      'Available in packages: 3 links = $2 | 15 links = $10 | 30 links = $20 | 60 links = $40. For custom bulk agency quantities, chat directly on WhatsApp.',
+    relatedServiceSlugs: ['blog-comments', 'cloudstack-backlinks', 'dr-as-backlinks', 'micro-local-site-gbp'],
+    relatedCaseStudyId: 'apex-dental-care',
+    relatedBlogSlug: 'cloudstack-seo-entity-authority-guide',
+    faqs: [
+      {
+        question: 'How does the $2 for 3 forum links pricing work?',
+        answer:
+          'You get 3 manually placed, contextually relevant forum links for a flat $2 ($0.66 per link). You can order single packs or select larger volumes (15 links for $10, 30 for $20, or 60 for $40).',
+      },
+      {
+        question: 'Are these forum links safe from Google algorithm penalties?',
+        answer:
+          'Yes, 100%. We do not use automated bots (like XRumer or GSA). Every response is handwritten and posted using aged, reputable user accounts in active, relevant threads.',
+      },
+      {
+        question: 'Do I get a live URL report?',
+        answer:
+          'Yes! Every order includes a complete transparent Google Sheet / Excel spreadsheet containing every live discussion URL, anchor text, and date.',
+      },
+    ],
+  },
+
+  'blog-comments': {
+    id: 'blog-comments',
+    slug: 'blog-comments',
+    name: 'Blog Comment Backlinks (Low OBL & Niche Relevant)',
+    badge: '📝 100% White-Hat Manual',
+    price: '$2',
+    period: 'for 4 links ($2 = 4 links package)',
+    unitPrice: 0.5,
+    unitLabel: '4 Blog Comments ($2)',
+    tagline: 'Handcrafted, contextually relevant blog comment backlinks on niche blogs with verified low Outbound Links (OBL) and zero spam.',
+    metaTitle: 'Blog Comment Backlinks (Low OBL, $2 = 4 Links) | Abdul Suboor',
+    metaDescription: 'Manual blog comment backlinks on niche blogs with low OBL for $2 = 4 links. 100% handcrafted thoughtful comments, zero automated spam, and full live URL reports.',
+    canonicalUrl: 'https://abdulsuboor.com/services/blog-comments',
+    focusKeywords: [
+      'blog comment backlinks',
+      'low obl blog comments',
+      'niche blog comment link building',
+      'white hat blog comments service',
+      'cheap high quality blog comments'
+    ],
+    heroStats: [
+      { label: 'Package Price', value: '$2 = 4 Links' },
+      { label: 'OBL Quality', value: 'Strict Low OBL' },
+      { label: 'Submission', value: '100% Manual' },
+      { label: 'Delivery Time', value: '3 - 5 Days' },
+    ],
+    executiveSummary:
+      'Natural link building requires clean anchor text distribution, diverse referring IP domains, and active crawler indexing signals. Our Blog Comment Backlinks service provides handcrafted, high-value comments on active niche blogs featuring low Outbound Links (OBL). We completely avoid spammed blog networks and automated bot tools. Every comment is written manually by reading the article topic and providing genuine insight, ensuring high moderator approval rates and strong search equity transfer.',
+    whyChooseThis: {
+      heading: 'Why Low OBL Niche Blog Comments Are Essential for Safe SEO',
+      points: [
+        {
+          title: 'Strict Low Outbound Links (Low OBL)',
+          desc: 'When a blog post has hundreds of spam comments, link equity is diluted to zero. We exclusively target clean, low-OBL blog articles where your backlink receives maximum juice.',
+          icon: 'Zap',
+        },
+        {
+          title: 'Handcrafted, Thoughtful Comments',
+          desc: 'Zero generic bot templates ("Nice post!", "Great info!"). We write relevant 2-4 sentence contributions that enrich the post discussion and get approved permanently.',
+          icon: 'FileText',
+        },
+        {
+          title: 'Natural Link Profile Diversification',
+          desc: 'Google algorithms penalize unnatural backlink profiles that only contain one link type. Blog comments provide the natural foundational equity Google expects to see.',
+          icon: 'ShieldCheck',
+        },
+        {
+          title: 'Accelerated Crawler Discovery & Indexing',
+          desc: 'Active blogs are crawled frequently by Googlebot. Placing your target URL on active blog pages prompts search spiders to recrawl and re-rank your target pages.',
+          icon: 'Rocket',
+        },
+      ],
+    },
+    methodologySteps: [
+      {
+        step: 'Phase 1',
+        title: 'Niche Blog Discovery & OBL Verification',
+        description: 'We curate active, indexed blog posts related to your niche and verify that the page has a clean comment section with low outbound links.',
+        timeframe: 'Day 1',
+        deliverables: ['Niche blog article pool', 'OBL quality check', 'Target URL distribution plan'],
+      },
+      {
+        step: 'Phase 2',
+        title: 'Manual Comment Crafting & Submission',
+        description: 'Our team writes custom, relevant comment responses referencing specific points in the article, submitting with your designated name/anchor and website URL.',
+        timeframe: 'Days 2 - 3',
+        deliverables: ['Custom comment copywriting', 'Manual submission', 'Approval tracking'],
+      },
+      {
+        step: 'Phase 3',
+        title: 'Live Link Verification & Report Delivery',
+        description: 'We verify that all comments are approved and live on the page, compiling the full URL report in a clean spreadsheet.',
+        timeframe: 'Days 4 - 5',
+        deliverables: ['Live URL Google Sheet report', 'Page metrics breakdown', 'WhatsApp delivery notification'],
+      },
+    ],
+    detailedDeliverables: [
+      {
+        category: 'Blog Comment Quality Features',
+        items: [
+          '4 Handcrafted Blog Comments for just $2 ($0.50 per link)',
+          'Strict Low OBL (Outbound Link) web pages only',
+          '100% Handcrafted comments tailored to the article content',
+          'Niche-relevant blog articles across your industry',
+          'Natural Anchor Text & URL diversification to guard against algorithm shifts',
+          'Zero automated software (No GSA, No Scrapebox bot spam)',
+        ],
+      },
+      {
+        category: 'Reporting & Deliverables',
+        items: [
+          'Comprehensive Google Sheet / Excel with all live comment URLs',
+          'Page Authority and domain metrics verification',
+          'Anchor text and target page mapping',
+          'Direct WhatsApp support with Abdul Suboor',
+        ],
+      },
+    ],
+    nicheApplications: [
+      {
+        niche: 'Local Service Businesses & Contractors',
+        icon: 'Hammer',
+        benefit: 'Establish natural domain diversity and trust signals.',
+        exampleKeyword: 'plumbing, roofing & home improvement blogs',
+      },
+      {
+        niche: 'Affiliate & Content Sites',
+        icon: 'Globe',
+        benefit: 'Stimulate Googlebot crawling for newly published review articles.',
+        exampleKeyword: 'niche product reviews & buyers guides',
+      },
+      {
+        niche: 'E-commerce & Direct-to-Consumer',
+        icon: 'Target',
+        benefit: 'Build brand URL mentions across lifestyle and industry publications.',
+        exampleKeyword: 'lifestyle, retail & product blogs',
+      },
+      {
+        niche: 'Healthcare, Dental & Wellness',
+        icon: 'Stethoscope',
+        benefit: 'Safe, clean referral signals in authoritative wellness blogs.',
+        exampleKeyword: 'health, dental & wellness articles',
+      },
+    ],
+    pricingOptions: [
+      {
+        tier: 'Comment Starter (4 Links)',
+        links: '4 Blog Comments',
+        price: '$2',
+        features: [
+          '4 Handcrafted Blog Comments ($2)',
+          'Strict Low OBL Pages',
+          'Niche Relevant Blog Posts',
+          'Full Live URL Report Sheet',
+          '3 - 5 Day Turnaround',
+        ],
+      },
+      {
+        tier: 'Comment Pro (20 Links)',
+        links: '20 Blog Comments',
+        price: '$10',
+        popular: true,
+        features: [
+          '20 Curated Blog Comments ($10)',
+          'Diverse IP & Domain Authority',
+          'Natural Link Velocity',
+          'Safe White-Hat Manual Work',
+          'Complete Spreadsheet Report',
+        ],
+      },
+      {
+        tier: 'Comment Scale (40 Links)',
+        links: '40 Blog Comments',
+        price: '$20',
+        features: [
+          '40 Verified Blog Comments ($20)',
+          'Broad Authority Niche Reach',
+          'Indexation Signal Acceleration',
+          'Detailed Metrics Report',
+          'Priority Turnaround',
+        ],
+      },
+      {
+        tier: 'Comment Max Stack (100 Links)',
+        links: '100 Blog Comments',
+        price: '$50',
+        features: [
+          '100 Verified Blog Comments ($50)',
+          'Maximum Link Profile Diversity',
+          'Ultra-Low OBL Guaranteed',
+          'Full Live URL Verification',
+          'VIP Support with Abdul Suboor',
+        ],
+      },
+    ],
+    customPricingNote:
+      'Available in packages: 4 links = $2 | 20 links = $10 | 40 links = $20 | 100 links = $50. For bulk agency monthly orders, message on WhatsApp.',
+    relatedServiceSlugs: ['forum-backlinks', 'cloudstack-backlinks', 'dr-as-backlinks', 'micro-local-site-gbp'],
+    relatedCaseStudyId: 'elite-kitchen-bath',
+    relatedBlogSlug: 'how-to-rank-in-google-map-3-pack',
+    faqs: [
+      {
+        question: 'How does the $2 for 4 blog comments pricing work?',
+        answer:
+          'You receive 4 handcrafted, low-OBL blog comment backlinks on niche-relevant articles for just $2 ($0.50 per comment). You can also choose larger bundles (20 comments for $10, 40 for $20, or 100 for $50).',
+      },
+      {
+        question: 'Are these comments posted manually or with bots?',
+        answer:
+          '100% manually. We never use Scrapebox, GSA, or automated script spam. Every comment is crafted by reading the article and submitting a contextually relevant comment.',
+      },
+      {
+        question: 'What does Low OBL mean?',
+        answer:
+          'Low OBL (Outbound Links) means the blog post has few outgoing links, ensuring that search engines pass meaningful PageRank equity directly to your URL rather than diluting it across thousands of spam comments.',
       },
     ],
   },
