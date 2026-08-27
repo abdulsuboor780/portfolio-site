@@ -76,7 +76,7 @@ export const CertificationPage: React.FC<CertificationPageProps> = ({
                     onError={() => setCertImgError(true)}
                     className="w-full h-auto object-contain rounded-xl"
                   />
-                  <div className="absolute top-4 right-4 bg-slate-950/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-emerald-500/40 text-xs text-emerald-400 font-bold flex items-center gap-1.5 shadow-lg">
+                  <div className="absolute top-4 left-4 bg-slate-950/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-emerald-500/40 text-xs text-emerald-400 font-bold flex items-center gap-1.5 shadow-lg">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                     <span>Official iSkills Certificate Document</span>
                   </div>
