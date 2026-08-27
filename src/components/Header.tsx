@@ -79,11 +79,25 @@ export const Header: React.FC<HeaderProps> = ({
 
   const serviceSubLinks = [
     {
+      slug: 'local-seo-ai-geo-gbp',
+      name: 'Local SEO + AI SEO & GEO + GBP',
+      badge: '🤖 $800/mo Retainer',
+      icon: Sparkles,
+      desc: 'Hyper-Local SEO, Gemini/ChatGPT GEO & GBP 3-Pack (6-12 Mo)',
+    },
+    {
       slug: 'micro-local-site-gbp',
       name: 'Turnkey Micro Local Site + GBP',
-      badge: '👑 Flagship ($500/mo)',
+      badge: '👑 $500/mo Retainer',
       icon: MapPin,
-      desc: 'Monthly Local SEO & 3-Pack rank expansion (6-12 mo)',
+      desc: 'Monthly Local SEO & 3-Pack rank expansion (6-12 Mo)',
+    },
+    {
+      slug: 'indexable-web-20-parasite-backlinks',
+      name: 'Indexable Web 2.0 Backlinks (Parasite)',
+      badge: '⚡ $1.50/link (20 Max)',
+      icon: Zap,
+      desc: 'DA 80–95+ handwritten parasite properties, 100% indexable',
     },
     {
       slug: 'website-development',
@@ -338,7 +352,7 @@ export const Header: React.FC<HeaderProps> = ({
               Results & Proof
             </button>
 
-            {/* iSkills Certificate */}
+            {/* Certification */}
             <button
               onClick={() => handleNavClick('certification')}
               id="nav-link-certification"
@@ -348,10 +362,7 @@ export const Header: React.FC<HeaderProps> = ({
                   : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
               }`}
             >
-              <span>iSkills Certificate</span>
-              <span className="text-[9px] uppercase px-1.5 py-0.2 rounded-full font-extrabold bg-emerald-500/20 text-emerald-400">
-                Verified
-              </span>
+              <span>Certification</span>
             </button>
 
             {/* SEO Insights (Blog) */}
@@ -508,7 +519,7 @@ export const Header: React.FC<HeaderProps> = ({
               <span>Results & Proof</span>
             </button>
 
-            {/* Certificate */}
+            {/* Certification */}
             <button
               onClick={() => handleNavClick('certification')}
               className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center justify-between cursor-pointer ${
@@ -517,10 +528,7 @@ export const Header: React.FC<HeaderProps> = ({
                   : 'text-slate-300 hover:bg-slate-900'
               }`}
             >
-              <span>iSkills Certificate</span>
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300">
-                Verified ID: 726553
-              </span>
+              <span>Certification</span>
             </button>
 
             {/* Blog */}

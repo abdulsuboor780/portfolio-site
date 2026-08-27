@@ -188,10 +188,26 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button 
+                  onClick={() => handleServiceClick('local-seo-ai-geo-gbp')} 
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
+                  🤖 Local SEO + AI SEO & GEO ($800/mo)
+                </button>
+              </li>
+              <li>
+                <button 
                   onClick={() => handleServiceClick('micro-local-site-gbp')} 
                   className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
                 >
-                  👑 Micro Local Site + GBP ($500)
+                  👑 Micro Local Site + GBP ($500/mo)
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleServiceClick('indexable-web-20-parasite-backlinks')} 
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
+                  ⚡ Web 2.0 Parasite Links ($1.50/link)
                 </button>
               </li>
               <li>
@@ -208,6 +224,22 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
                 >
                   ☁️ Cloudstack Links ($1.50/link)
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleServiceClick('forum-backlinks')} 
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
+                  💬 Forum Backlinks ($2 = 3 links)
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleServiceClick('blog-comments')} 
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
+                  📝 Blog Comments ($2 = 4 links)
                 </button>
               </li>
               <li>

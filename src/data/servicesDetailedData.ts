@@ -1416,4 +1416,455 @@ export const DETAILED_SERVICES: Record<string, ServiceDetail> = {
       },
     ],
   },
+  'local-seo-ai-geo-gbp': {
+    id: 'local-seo-ai-geo-gbp',
+    slug: 'local-seo-ai-geo-gbp',
+    name: 'Local SEO + AI SEO & GEO (Generative Engine Optimization) + GBP',
+    badge: '🤖 Ultimate Search Retainer ($800/mo)',
+    price: '$800',
+    period: '/ month (6 to 12 Months Contract)',
+    tagline: 'The unified next-generation search engine ecosystem: We integrate Hyper-Local SEO, AI Semantic Topic Clusters, GEO (Generative Engine Optimization for Google Gemini Overviews, Perplexity & ChatGPT Search), and Google Business Profile (GBP) 3-Pack authority under an all-in-one 6–12 month contract.',
+    metaTitle: 'Local SEO, AI SEO & GEO with Google Business Profile ($800/mo) | Abdul Suboor',
+    metaDescription: 'Complete $800/month SEO retainer combining Local SEO, AI-Powered Semantic Search, Generative Engine Optimization (GEO for Gemini & ChatGPT), and GBP 3-Pack domination (6-12 mo contract).',
+    canonicalUrl: 'https://abdulsuboor.com/services/local-seo-ai-geo-gbp',
+    focusKeywords: [
+      'Local SEO and AI SEO',
+      'Generative Engine Optimization GEO',
+      'AI Overviews SGE optimization',
+      'Google Business Profile 3-Pack ranking',
+      'Local semantic search graph',
+      'ChatGPT search optimization local business',
+    ],
+    heroStats: [
+      { label: 'Retainer Term', value: '6–12 Mo Contract' },
+      { label: 'Monthly Investment', value: '$800 / mo' },
+      { label: 'AI Search Engines', value: 'Gemini, Perplexity & GPT' },
+      { label: 'GBP Map Proximity', value: '5-15 Mile Grid' },
+    ],
+    executiveSummary:
+      'Search behavior is undergoing a massive transformation. High-ticket homeowners, local consumers, and commercial clients are no longer searching only with single keywords on standard search pages — they interact with generative AI assistants like Google Gemini AI Overviews (SGE), Perplexity AI, ChatGPT Search, Apple Intelligence, and Microsoft Copilot, while still booking directly through Google Business Profile 3-Pack map listings.\n\nOptimizing for only traditional keywords leaves over 45% of high-intent search inquiries on the table. Our flagship $800/month Local SEO + AI SEO + GEO + GBP retainer provides a complete unified growth engine. We structure your local website, brand knowledge graph, and Google Business Profile to dominate conventional Google 3-Packs AND become the definitive, cited authority recommended by modern Generative AI Answer Engines.',
+    whyChooseThis: {
+      heading: 'The 4 Unified Pillars of Next-Gen Search Domination',
+      points: [
+        {
+          title: '1. Hyper-Local SEO & Geo-Grid Proximity',
+          desc: 'We construct hyper-targeted neighborhood landing hubs, micro-radius schema graphs (GeoCoordinates, LocalBusiness, HasOfferCatalog), and aggressive citation velocity to expand your Google 3-Pack footprint across your entire 10-15 mile service perimeter.',
+          icon: 'MapPin',
+        },
+        {
+          title: '2. AI SEO & Semantic Entity Clustering',
+          desc: 'We build structured topical authority hubs organized around semantic entities and subject-predicate-object knowledge triples that search algorithms recognize as the definitive regional authority for your service.',
+          icon: 'Layers',
+        },
+        {
+          title: '3. GEO (Generative Engine Optimization)',
+          desc: 'We engineer your brand footprint for Google Gemini AI Overviews, Perplexity AI, and ChatGPT Search. By injecting high-context Q&A citations, statistical proof points, and co-citation anchors across trusted web repositories, generative models cite your business as the recommended choice.',
+          icon: 'Sparkles',
+        },
+        {
+          title: '4. Google Business Profile (GBP) 3-Pack Mastery',
+          desc: 'Continuous weekly GBP updates, geo-tagged project assets, automated review generation workflows, and ruthless Google Redressal spam removals to eliminate illegitimate keyword-stuffed competitors blocking your #1 spot.',
+          icon: 'Zap',
+        },
+      ],
+    },
+    methodologySteps: [
+      {
+        step: '01',
+        title: 'Month 1: AI Entity Architecture & Full GBP Overhaul',
+        description:
+          'Deep audit of your current digital footprint, semantic knowledge graph construction, primary/secondary GBP category mapping, competitor spam scans, and conversion-focused local landing structure deployment.',
+        timeframe: 'Month 1 Sprint (Days 1–14 Launch)',
+        deliverables: [
+          'Full Local SEO & AI Answer Engine visibility baseline audit',
+          'Complete GBP category re-engineering, product catalog & geo-tagging',
+          'Local JSON-LD Knowledge Graph schema & entity triples',
+          'First wave of Google Redressal spam competitor removals',
+          '30 Top tier-1 local citations & directory sync',
+        ],
+      },
+      {
+        step: '02',
+        title: 'Months 2–4: GEO Citation Seeding & Geo-Grid Expansion',
+        description:
+          'Seeding high-authority conversational Q&A citations across trusted industry platforms for Perplexity/Gemini AI recognition while building hyper-local backlinks and expanding Google Maps 3-Pack radius.',
+        timeframe: 'Months 2 to 4 Sprints',
+        deliverables: [
+          'Monthly Perplexity AI & Google AI Overviews brand citation seeding',
+          'Multi-cloud entity stacking (AWS, Google Cloud, Azure)',
+          'Monthly Geo-Grid heatmap scanning (13x13 grid rank visualization)',
+          'Weekly geo-targeted GBP posts, localized products, and Q&A seeding',
+          'Ongoing spam competitor monitoring and removal filings',
+        ],
+      },
+      {
+        step: '03',
+        title: 'Months 5–8: Topical Authority Dominance & AI Recommendation Locking',
+        description:
+          'Expanding semantic topic silos, capturing long-tail conversational voice search queries, securing niche forum and media mentions, and solidifying #1 green pins across surrounding suburbs.',
+        timeframe: 'Months 5 to 8 Sprints',
+        deliverables: [
+          'Deep semantic content expansion for complex buyer decision queries',
+          'Niche-relevant forum discussions & contextual dofollow link velocity',
+          'Advanced review sentiment optimization and keyword-rich response blueprint',
+          'Inbound phone call tracking & Google Maps action analytics',
+        ],
+      },
+      {
+        step: '04',
+        title: 'Months 9–12: Market Monopoly & Predictive Search Moat',
+        description:
+          'Locking in multi-city authority, defending #1 positions against aggressive competitors, and ensuring continuous citation in ChatGPT Search, Gemini, and local map packs.',
+        timeframe: 'Months 9 to 12 Sprints',
+        deliverables: [
+          'Comprehensive ranking moat defense against emerging local competitors',
+          'Continuous AI Overviews prompt simulation and citation reinforcement',
+          'Multi-location expansion blueprints & seasonal lead surges',
+          'Annual growth review and ROI multiplier audit',
+        ],
+      },
+    ],
+    detailedDeliverables: [
+      {
+        category: 'Local SEO & Technical Entity Foundation',
+        items: [
+          'Sub-second local landing pages optimized for mobile click-to-call conversion',
+          'LocalBusiness, GeoShape, AreaServed, and OpeningHours JSON-LD entity schema graph',
+          'Topical cluster architecture mapping primary service keywords and LSI variations',
+          'NAP (Name, Address, Phone) consistency audit and ongoing cleanup',
+        ],
+      },
+      {
+        category: 'AI SEO & Generative Engine Optimization (GEO)',
+        items: [
+          'Optimization for Google Gemini AI Overviews (SGE) recommendation snippets',
+          'Brand co-citation building for Perplexity AI, Claude & ChatGPT Search inclusion',
+          'Direct factual answer architecture for conversational voice and AI search prompts',
+          'Entity relationship mapping linking your brand to specific geo-coordinates and trades',
+        ],
+      },
+      {
+        category: 'Google Business Profile (GBP) 3-Pack Domination',
+        items: [
+          'Primary and secondary category optimization for maximum search reach',
+          'Weekly geo-tagged photo uploads and localized keyword-rich updates',
+          'Proactive Google Redressal spam complaints to remove fake competitors',
+          'Interactive Q&A seeding addressing high-intent client inquiries',
+          'Customer review velocity blueprints and sentiment analysis',
+        ],
+      },
+      {
+        category: 'Reporting, Strategy & Direct Communication',
+        items: [
+          'Monthly 13x13 Geo-Grid proximity rank heatmap scans',
+          'AI Search Engines recommendation tracking (Gemini, Perplexity, GPT)',
+          'Inbound phone call, direction request, and website click analytics',
+          'Direct VIP WhatsApp access with Abdul Suboor throughout the contract',
+        ],
+      },
+    ],
+    nicheApplications: [
+      {
+        niche: 'Bathroom & Kitchen Remodelers',
+        icon: 'Hammer',
+        benefit: 'Capture high-ticket $25k–$75k renovation contracts from both Google Maps and homeowners asking AI for the top rated local contractor.',
+        exampleKeyword: 'best luxury kitchen remodeler in [city]',
+      },
+      {
+        niche: 'Solar Panel Installers',
+        icon: 'Sun',
+        benefit: 'Dominates solar incentive searches and generative AI comparisons for residential and commercial solar installations.',
+        exampleKeyword: 'commercial solar panel installer near me',
+      },
+      {
+        niche: 'Emergency Plumbers & HVAC',
+        icon: 'Wrench',
+        benefit: 'Locks in immediate emergency phone calls from Google 3-Pack within 5-15 miles while maintaining top AI recommendations.',
+        exampleKeyword: 'emergency furnace repair 24/7 [city]',
+      },
+      {
+        niche: 'Cosmetic & General Dentists',
+        icon: 'Smile',
+        benefit: 'Ranks top 3 for high-margin dental implants, veneers, and family dentistry in local map searches and AI assistant prompts.',
+        exampleKeyword: 'all on 4 dental implants cost [city]',
+      },
+    ],
+    pricingOptions: [
+      {
+        tier: 'Single-Location AI & Local SEO Retainer',
+        links: '1 Target City / Core Service',
+        price: '$800/mo',
+        popular: true,
+        features: [
+          '$800 / Month Fixed Retainer (6 to 12 Months Contract)',
+          'Full Local SEO + AI SEO + GEO + GBP 3-Pack',
+          'Month 1 Asset Sprint + Months 2–12 Continuous Growth',
+          'Gemini AI Overviews & Perplexity Citation Seeding',
+          'Monthly Geo-Grid Heatmap Scans & Spam Redressals',
+          'Direct WhatsApp VIP Access with Abdul Suboor',
+        ],
+      },
+      {
+        tier: 'Multi-Location Enterprise Retainer',
+        links: '2–5 Cities / Service Silos',
+        price: 'Custom on WhatsApp',
+        features: [
+          'Multi-City Local SEO & GEO Expansion',
+          'Multi-Profile GBP Management & Spam Defense',
+          'Enterprise Entity Knowledge Graph Schema',
+          'High-Velocity Backlink & Citation Sprints',
+          'Weekly Performance Reports & Strategy Calls',
+        ],
+      },
+    ],
+    customPricingNote:
+      'The standard retainer is $800/month on a 6 to 12-month contract for 1 location. For multi-location businesses, franchises, or multi-trade contractors, we provide custom discounted retainers via WhatsApp.',
+    relatedServiceSlugs: ['micro-local-site-gbp', 'cloudstack-backlinks', 'forum-backlinks', 'gbp-optimization'],
+    relatedCaseStudyId: 'elite-kitchen-bath',
+    relatedBlogSlug: 'how-to-rank-in-google-map-3-pack',
+    faqs: [
+      {
+        question: 'Why combine Local SEO, AI SEO, GEO, and Google Business Profile together?',
+        answer:
+          'Modern consumers use multiple channels to choose service providers. While Google Maps 3-Packs generate the immediate click-to-call conversions, Generative AI engines (Google Gemini Overviews, Perplexity AI, ChatGPT Search) increasingly influence the research and shortlisting phase. Combining all four disciplines guarantees that whether a client searches on Google Maps or asks an AI assistant, your business is the #1 recommended authority.',
+      },
+      {
+        question: 'What is GEO (Generative Engine Optimization)?',
+        answer:
+          'GEO is the discipline of optimizing your brand, content, and external citations so that AI models (such as Google Gemini, OpenAI ChatGPT, and Perplexity) select your business as a cited source and direct recommendation when users ask conversational questions like "Who is the most reliable roofing contractor in North Austin?".',
+      },
+      {
+        question: 'Why is this structured as a 6 to 12-month contract?',
+        answer:
+          'Local SEO, entity authority, and AI citation graphs are cumulative assets. Google’s geo-grid proximity algorithms and AI training loops require consistent citation velocity, continuous review signals, regular GBP updates, and active ranking defense. A 6 to 12-month partnership allows us to build an impenetrable ranking moat that competitors cannot easily overtake.',
+      },
+      {
+        question: 'How do you track ranking progress and AI citations?',
+        answer:
+          'You receive comprehensive monthly reports containing visual 13x13 Geo-Grid proximity rank heatmaps (showing your exact rank at every mile marker), Google Maps call and direction analytics, and AI search visibility audit reports.',
+      },
+    ],
+  },
+  'indexable-web-20-parasite-backlinks': {
+    id: 'indexable-web-20-parasite-backlinks',
+    slug: 'indexable-web-20-parasite-backlinks',
+    name: 'Indexable Web 2.0 Backlinks (Best for Parasite SEO)',
+    badge: '⚡ High DA Parasite Authority ($1.50/link)',
+    price: '$1.50',
+    period: 'per link ($1.50 USD | Total 20 Available)',
+    unitPrice: 1.5,
+    maxUnits: 20,
+    unitLabel: 'Web 2.0 Parasite Link ($1.50)',
+    tagline: 'High-authority (DA 80–95+) indexable Web 2.0 properties specifically engineered for Parasite SEO rankings, instant trust transfer, and rapid Google indexation. Strictly capped at 20 available spots.',
+    metaTitle: 'Indexable Web 2.0 Backlinks for Parasite SEO ($1.50/link) | Abdul Suboor',
+    metaDescription: 'High-authority DA 80-95+ indexable Web 2.0 backlinks engineered for Parasite SEO rankings. 100% manual, unique handwritten content, low OBL, $1.50/link (20 total available).',
+    canonicalUrl: 'https://abdulsuboor.com/services/indexable-web-20-parasite-backlinks',
+    focusKeywords: [
+      'Indexable Web 2.0 backlinks',
+      'Parasite SEO backlinks',
+      'High DA Web 2.0 links',
+      'Tier 1 contextual backlinks',
+      'Fast indexing Web 2.0 properties',
+      'Web 2.0 link building service',
+    ],
+    heroStats: [
+      { label: 'Price Per Link', value: '$1.50 USD' },
+      { label: 'Total Available', value: '20 Links Max' },
+      { label: 'Domain Authority', value: 'DA 80–95+' },
+      { label: 'Indexation Rate', value: '100% Manual Pings' },
+    ],
+    executiveSummary:
+      'Parasite SEO remains one of the most powerful tactical advantages in modern search engine optimization. By building content assets on massive root domains with immense historical trust (such as WordPress.com, Blogger, Medium, Wix, Weebly, Substack, Tumblr, Notion, and GitHub Pages), you can rank for competitive commercial terms almost immediately while passing high-trust contextual link juice directly to your target URL.\n\nUnlike automated spam software that creates ghost accounts that never get indexed, our Indexable Web 2.0 properties are 100% handcrafted. Each property includes unique handwritten niche-relevant articles, optimized headings, media embeds, geo-coordinate tags, and active indexation acceleration signals. Total supply is strictly capped at 20 premium properties to ensure elite manual execution.',
+    whyChooseThis: {
+      heading: 'Why Our Web 2.0 Properties Deliver Elite Parasite SEO Power',
+      points: [
+        {
+          title: 'Massive Root Domain Authority (DA 80–95+)',
+          desc: 'Hosted on world-class root domains with billions of incoming backlinks. Google trusts these platforms inherently, giving your content instant crawl priority.',
+          icon: 'ShieldCheck',
+        },
+        {
+          title: 'Engineered for Parasite SEO Rankings',
+          desc: 'Optimized on-page structure designed to rank the Web 2.0 page itself for long-tail buyer keywords, funnelling warm traffic straight to your business.',
+          icon: 'Zap',
+        },
+        {
+          title: '100% Indexation Blueprint',
+          desc: 'We solve the #1 issue with modern Web 2.0s: indexation. We apply social entity pings, internal hub linking, and index acceleration signals so Google crawls and indexes your properties.',
+          icon: 'Sparkles',
+        },
+        {
+          title: 'Handwritten Unique Content & Contextual Anchors',
+          desc: 'Zero spun content or low-grade AI gibberish. Every article is written with natural topical relevance and safe contextual anchor text distributions.',
+          icon: 'FileText',
+        },
+      ],
+    },
+    methodologySteps: [
+      {
+        step: '01',
+        title: 'Platform Selection & Aged Subdomain Setup',
+        description:
+          'Selecting top-tier Web 2.0 platforms (Medium, WordPress.com, Blogger, Wix, Weebly, Substack, Tumblr) and configuring branded, niche-relevant subdomains with customized profile bios.',
+        timeframe: 'Day 1',
+        deliverables: [
+          'High-DA Web 2.0 property registrations on distinct platforms',
+          'Complete profile bio, logo, and author entity branding setup',
+          'Niche categorization and clean permalink structure configuration',
+        ],
+      },
+      {
+        step: '02',
+        title: 'Content Creation & Multimedia Integration',
+        description:
+          'Writing unique, topic-relevant articles with H1/H2/H3 formatting, embedding geo-tagged images, YouTube video embeds, and Google Maps if targeting local keywords.',
+        timeframe: 'Days 2–3',
+        deliverables: [
+          'Unique 500+ word niche-specific articles per Web 2.0 property',
+          'Relevant royalty-free image and video embeds for high engagement',
+          'Contextual anchor text insertion linking to your target URL',
+        ],
+      },
+      {
+        step: '03',
+        title: 'Indexation Signal Blast & Entity Connection',
+        description:
+          'Executing active indexation protocols: social signals, pinging services, XML sitemap submissions, and tier-2 linking to trigger fast Googlebot crawler indexing.',
+        timeframe: 'Days 4–5',
+        deliverables: [
+          'Googlebot crawl stimulation & indexation pings',
+          'Social bookmark entity connection for entity verification',
+          'Full Excel / Google Sheet with live URLs, platform DA, and login details',
+        ],
+      },
+    ],
+    detailedDeliverables: [
+      {
+        category: 'High-Authority Web 2.0 Properties',
+        items: [
+          'Handcrafted accounts on DA 80–95+ platforms (WordPress, Blogger, Medium, Wix, Weebly, Tumblr, Substack)',
+          'Unique custom subdomains matching your industry and topical keywords',
+          'Complete profile customization with professional avatar, bio, and entity links',
+        ],
+      },
+      {
+        category: 'Content & Contextual Optimization',
+        items: [
+          '100% handwritten, niche-relevant articles matching search intent',
+          'Strategic contextual anchor text distribution (Exact, Partial, Brand, Naked URL)',
+          'Embedded multimedia: relevant images, video embeds, and Google Map embeds',
+        ],
+      },
+      {
+        category: 'Reporting & Deliverables',
+        items: [
+          'Complete Excel / Google Sheet with live URLs for every Web 2.0',
+          'Platform Domain Authority (DA) and Page Authority (PA) verification',
+          'Account login credentials provided for 100% full client ownership',
+          'Fast turnaround within 3–5 business days',
+        ],
+      },
+    ],
+    nicheApplications: [
+      {
+        niche: 'Local Service Contractors & Remodelers',
+        icon: 'Hammer',
+        benefit: 'Pumps domain equity into local money sites and GBP map listings while ranking parasite pages for suburb service terms.',
+        exampleKeyword: 'kitchen renovation contractor reviews [city]',
+      },
+      {
+        niche: 'Affiliate Marketing & Niche Review Sites',
+        icon: 'TrendingUp',
+        benefit: 'Ranks product comparison parasite articles on Google page 1 within days to capture high-intent affiliate commissions.',
+        exampleKeyword: 'best solar backup generator review 2026',
+      },
+      {
+        niche: 'eCommerce & Direct-to-Consumer Brands',
+        icon: 'ShoppingBag',
+        benefit: 'Boosts organic category rankings and provides safe tier-1 link diversification for commercial product landing pages.',
+        exampleKeyword: 'organic skincare brand review',
+      },
+      {
+        niche: 'SaaS & B2B Technology',
+        icon: 'Code2',
+        benefit: 'Builds foundational authority and alternative review assets that rank alongside your main product pages.',
+        exampleKeyword: 'best local seo ranking software',
+      },
+    ],
+    pricingOptions: [
+      {
+        tier: 'Starter Parasite (5 Links)',
+        links: '5 Web 2.0 Properties',
+        price: '$7.50',
+        features: [
+          '5 High-DA Web 2.0 Properties ($7.50)',
+          'Unique Handwritten Niche Articles',
+          'Contextual Anchor Placement',
+          'Live URL Spreadsheet Report',
+        ],
+      },
+      {
+        tier: 'Growth Parasite (10 Links)',
+        links: '10 Web 2.0 Properties',
+        price: '$15',
+        popular: true,
+        features: [
+          '10 High-DA Web 2.0 Properties ($15)',
+          'Embedded Media & Geo-Signals',
+          'Fast Indexation Acceleration',
+          'Diversified Anchor Text Profile',
+        ],
+      },
+      {
+        tier: 'Power Parasite (15 Links)',
+        links: '15 Web 2.0 Properties',
+        price: '$22.50',
+        features: [
+          '15 High-DA Web 2.0 Properties ($22.50)',
+          'Top-Tier Root Platforms (Medium, WP, Blogger)',
+          'Tier-1 Anchor Diversification',
+          'Priority Delivery & Reporting',
+        ],
+      },
+      {
+        tier: 'Full 20-Stack (Max Available)',
+        links: '20 Web 2.0 Properties',
+        price: '$30',
+        features: [
+          'All 20 Available Web 2.0 Properties ($30)',
+          'Complete Maximum Parasite Authority Stack',
+          'Maximum Indexation Blast Signals',
+          'Full Credentials & VIP Support',
+        ],
+      },
+    ],
+    customPricingNote:
+      'Fixed rate of $1.50 USD per Web 2.0 link. Total available spots are strictly capped at 20 properties. Order any quantity from 1 to 20 links via the calculator or WhatsApp.',
+    relatedServiceSlugs: ['cloudstack-backlinks', 'forum-backlinks', 'blog-comments', 'dr-as-backlinks'],
+    relatedCaseStudyId: 'dental-care-3pack',
+    relatedBlogSlug: 'how-to-rank-in-google-map-3-pack',
+    faqs: [
+      {
+        question: 'Why are these Web 2.0 backlinks so effective for Parasite SEO?',
+        answer:
+          'Platforms like WordPress.com, Blogger, Medium, and Wix have Domain Authority scores of 85–95+ with millions of trusted backlinks. When you publish optimized content on these platforms, Google treats the page with high initial trust, allowing it to rank quickly for target keywords while passing safe authority juice to your linked assets.',
+      },
+      {
+        question: 'How do you ensure the Web 2.0 properties actually get indexed by Google?',
+        answer:
+          'Unlike low-quality bot networks that get ignored, we craft unique, formatted articles with images and video embeds, and run them through active indexation workflows (social entity pings, sitemap submissions, and pinging networks) to ensure Googlebot crawls and indexes the pages.',
+      },
+      {
+        question: 'Why is there a limit of 20 available links?',
+        answer:
+          'Because every single Web 2.0 is built 100% manually with unique handwritten content and custom media rather than automated spam software. Capping capacity at 20 premium properties guarantees flawless quality and indexability for each client.',
+      },
+      {
+        question: 'Do I get full login credentials for the Web 2.0 properties?',
+        answer:
+          'Yes! Your live Excel/Google Sheet delivery report includes complete login credentials (email, username, password) along with the live published URLs so you retain 100% ownership.',
+      },
+    ],
+  },
 };
+

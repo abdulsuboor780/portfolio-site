@@ -33,11 +33,13 @@ export const PricingPage: React.FC<PricingPageProps> = ({
   onOpenAudit,
 }) => {
   const [cloudLinksCount, setCloudLinksCount] = useState<number>(20);
+  const [web20LinksCount, setWeb20LinksCount] = useState<number>(10);
+  const [activeCalcTab, setActiveCalcTab] = useState<'web20' | 'cloud'>('web20');
   const [activeFaqIndex, setActiveFaqIndex] = useState<number | null>(0);
 
   // SEO & Schema Setup
   useEffect(() => {
-    document.title = 'Transparent Local SEO & Web Development Pricing (2026) | Abdul Suboor';
+    document.title = 'Transparent SEO, AI SEO & Backlink Pricing (2026) | Abdul Suboor';
 
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {
@@ -47,7 +49,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({
     }
     metaDesc.setAttribute(
       'content',
-      'Flat, transparent pricing for Turnkey Micro Local Sites ($500), GBP 3-Pack Optimization ($300), Cloudstack Backlinks ($1.50/link), and Web Development. Zero agency markup.'
+      'Transparent SEO pricing: Local SEO + AI SEO & GEO ($800/mo), Turnkey Micro Local Sites ($500/mo), Indexable Web 2.0 Parasite Backlinks ($1.50/link - 20 available), Cloudstack links ($1.50/link), and Forum links.'
     );
 
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
@@ -74,9 +76,9 @@ export const PricingPage: React.FC<PricingPageProps> = ({
         {
           '@type': 'WebPage',
           '@id': 'https://abdulsuboor.com/pricing#webpage',
-          name: 'Transparent Local SEO & Web Development Pricing',
+          name: 'Transparent SEO, AI SEO & Backlink Pricing',
           url: 'https://abdulsuboor.com/pricing',
-          description: 'Flat, transparent pricing for Turnkey Micro Local Sites, GBP Optimization, Cloudstack Backlinks, and Web Development.',
+          description: 'Transparent SEO pricing for Local SEO + AI SEO & GEO ($800/mo), Turnkey Micro Local Sites ($500/mo), and Web 2.0 Parasite Backlinks ($1.50/link).',
           isPartOf: {
             '@type': 'WebSite',
             name: 'Abdul Suboor SEO & Web Development',
@@ -112,12 +114,23 @@ export const PricingPage: React.FC<PricingPageProps> = ({
   }, []);
 
   const cloudTotalCost = (cloudLinksCount * 1.5).toFixed(cloudLinksCount % 2 === 0 ? 0 : 2);
+  const web20TotalCost = (web20LinksCount * 1.5).toFixed(web20LinksCount % 2 === 0 ? 0 : 2);
 
   const pricingFaqs = [
     {
-      question: 'Are there any hidden monthly retainers or setup fees?',
+      question: 'What is included in the $800/month Local SEO + AI SEO & GEO + GBP Retainer?',
       answer:
-        'None whatsoever. Our turnkey micro sites ($500), cloudstack links ($1.50/link), web dev builds ($300+), and GBP optimizations ($300) are clear flat rates. You only pay for what you order, with zero forced monthly contracts.',
+        'The $800/mo retainer is our ultimate search ecosystem. It combines traditional Local SEO (micro landing pages, geo-grid 3-Pack rankings, schema graph, NAP velocity) with modern AI SEO (semantic entity clustering, knowledge graph triples) and GEO (Generative Engine Optimization to secure citations in Google Gemini AI Overviews, Perplexity AI, and ChatGPT Search), along with continuous GBP management and spam competitor removal over a 6 to 12-month contract.',
+    },
+    {
+      question: 'How does the $1.50 Indexable Web 2.0 Parasite Backlinks service work?',
+      answer:
+        'We build handcrafted, high-authority Web 2.0 properties (DA 80–95+ on platforms like WordPress.com, Blogger, Medium, Wix, Substack) with unique handwritten niche articles and fast indexation signals. Each link is $1.50 USD, and supply is strictly capped at 20 available spots to ensure 100% manual quality and indexability.',
+    },
+    {
+      question: 'Why are the Local SEO & Micro Site packages structured as 6 to 12-month contracts?',
+      answer:
+        'Google 3-Pack proximity algorithms, citation velocity, review accumulation, and AI answer engine training loops require sustained authority building. A 6 to 12-month contract guarantees that your business not only reaches #1 but defends that position against aggressive competitors.',
     },
     {
       question: 'What payment methods do you accept?',
@@ -125,14 +138,9 @@ export const PricingPage: React.FC<PricingPageProps> = ({
         'We accept international bank transfers, Wise (TransferWise), Payoneer, direct crypto payments (USDT/BTC), or verified milestone contracts through Upwork or Fiverr if preferred by corporate clients.',
     },
     {
-      question: 'Do you offer bulk discounts for agencies or multi-location businesses?',
-      answer:
-        'Yes! For agencies managing 5+ client accounts or multi-location franchises ordering multiple micro sites or bulk cloudstack link stacks, we provide custom discounted bundle rates via WhatsApp.',
-    },
-    {
       question: 'How do I receive proof of work and deliverables?',
       answer:
-        'Every project includes complete transparent reporting: live URL spreadsheets for all backlinks and cloud properties, full source code handover for web builds, and before/after Geo-Grid tracking scans for Google Maps rankings.',
+        'Every project includes complete transparent reporting: live URL spreadsheets for all backlinks and Web 2.0 properties (including account login credentials), full source code handover for web builds, and before/after Geo-Grid tracking scans for Google Maps rankings.',
     },
   ];
 
@@ -281,49 +289,137 @@ export const PricingPage: React.FC<PricingPageProps> = ({
         {/* Interactive Link Volume Calculator */}
         {/* ========================================================================= */}
         <div className="rounded-3xl bg-slate-900 border border-emerald-500/30 p-6 sm:p-8 space-y-6">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div>
               <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">
-                Micro Order Calculator
+                Micro Order & Volume Calculator
               </span>
               <h2 className="text-xl sm:text-2xl font-black text-white">
-                Customize Your Cloudstack Link Stack ($1.50 / Link)
+                Customize Your Link Order ($1.50 / Link)
               </h2>
             </div>
-            <div className="text-right">
-              <span className="text-3xl font-black text-emerald-400">${cloudTotalCost}</span>
-              <span className="text-xs text-slate-400 block font-medium">({cloudLinksCount} Links Total)</span>
+            <div className="flex items-center gap-2 p-1 rounded-xl bg-slate-950 border border-slate-800">
+              <button
+                onClick={() => setActiveCalcTab('web20')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  activeCalcTab === 'web20'
+                    ? 'bg-emerald-400 text-slate-950'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                Web 2.0 Parasite (20 Max)
+              </button>
+              <button
+                onClick={() => setActiveCalcTab('cloud')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  activeCalcTab === 'cloud'
+                    ? 'bg-emerald-400 text-slate-950'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                Cloudstack Links
+              </button>
             </div>
           </div>
 
-          <div className="space-y-3">
-            <div className="flex justify-between text-xs font-bold text-slate-400">
-              <span>1 Link ($1.50)</span>
-              <span className="text-emerald-400 font-bold">{cloudLinksCount} Cloudstack Links Selected</span>
-              <span>30 Links ($45.00 Max Tier)</span>
-            </div>
-            <input
-              type="range"
-              min="1"
-              max="30"
-              value={cloudLinksCount}
-              onChange={(e) => setCloudLinksCount(parseInt(e.target.value))}
-              className="w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400"
-            />
-          </div>
+          {activeCalcTab === 'web20' ? (
+            <div className="space-y-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-emerald-400" />
+                    <span>Indexable Web 2.0 Parasite Backlinks</span>
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                      Strict Cap: 20 Available Spots
+                    </span>
+                  </h3>
+                  <p className="text-xs text-slate-400 mt-1">
+                    DA 80–95+ authority web 2.0 properties with handwritten niche content, media embeds & rapid indexing signals.
+                  </p>
+                </div>
+                <div className="text-right">
+                  <span className="text-3xl font-black text-emerald-400">${web20TotalCost}</span>
+                  <span className="text-xs text-slate-400 block font-medium">({web20LinksCount} of 20 Max Selected)</span>
+                </div>
+              </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-slate-800">
-            <p className="text-xs text-slate-400">
-              Deploys across Amazon AWS S3, Google Cloud Storage, Microsoft Azure, and Oracle Cloud with live Excel sheet.
-            </p>
-            <button
-              onClick={() => onSelectServiceForContact(`Cloudstack Backlinks (${cloudLinksCount} Links - $${cloudTotalCost})`)}
-              className="px-5 py-2.5 rounded-xl bg-emerald-400 text-slate-950 font-bold text-xs hover:bg-emerald-300 transition-all flex items-center gap-1.5 cursor-pointer"
-            >
-              <span>Order {cloudLinksCount} Cloudstack Links</span>
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
+              <div className="space-y-3">
+                <div className="flex justify-between text-xs font-bold text-slate-400">
+                  <span>1 Link ($1.50)</span>
+                  <span className="text-emerald-400 font-bold">{web20LinksCount} Web 2.0 Links Selected (${web20TotalCost})</span>
+                  <span>20 Links ($30.00 Max Cap)</span>
+                </div>
+                <input
+                  type="range"
+                  min="1"
+                  max="20"
+                  value={web20LinksCount}
+                  onChange={(e) => setWeb20LinksCount(parseInt(e.target.value))}
+                  className="w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400"
+                />
+              </div>
+
+              <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-slate-800">
+                <p className="text-xs text-slate-400">
+                  Includes unique handwritten niche article, media embeds, full login credentials, and fast indexation pings.
+                </p>
+                <button
+                  onClick={() => onSelectServiceForContact(`Indexable Web 2.0 Backlinks (${web20LinksCount} Links - $${web20TotalCost})`)}
+                  className="px-5 py-2.5 rounded-xl bg-emerald-400 text-slate-950 font-bold text-xs hover:bg-emerald-300 transition-all flex items-center gap-1.5 cursor-pointer"
+                >
+                  <span>Order {web20LinksCount} Web 2.0 Links ($${web20TotalCost})</span>
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="space-y-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-emerald-400" />
+                    <span>Cloudstack Entity Backlinks (AWS, GCP, Azure, Oracle)</span>
+                  </h3>
+                  <p className="text-xs text-slate-400 mt-1">
+                    Multi-cloud authority properties engineered to transfer massive raw root trust and shield against algorithm updates.
+                  </p>
+                </div>
+                <div className="text-right">
+                  <span className="text-3xl font-black text-emerald-400">${cloudTotalCost}</span>
+                  <span className="text-xs text-slate-400 block font-medium">({cloudLinksCount} Links Total)</span>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex justify-between text-xs font-bold text-slate-400">
+                  <span>1 Link ($1.50)</span>
+                  <span className="text-emerald-400 font-bold">{cloudLinksCount} Cloudstack Links Selected (${cloudTotalCost})</span>
+                  <span>30 Links ($45.00 Max Tier)</span>
+                </div>
+                <input
+                  type="range"
+                  min="1"
+                  max="30"
+                  value={cloudLinksCount}
+                  onChange={(e) => setCloudLinksCount(parseInt(e.target.value))}
+                  className="w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400"
+                />
+              </div>
+
+              <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-slate-800">
+                <p className="text-xs text-slate-400">
+                  Deploys across Amazon AWS S3, Google Cloud Storage, Microsoft Azure, and Oracle Cloud with live Excel sheet.
+                </p>
+                <button
+                  onClick={() => onSelectServiceForContact(`Cloudstack Backlinks (${cloudLinksCount} Links - $${cloudTotalCost})`)}
+                  className="px-5 py-2.5 rounded-xl bg-emerald-400 text-slate-950 font-bold text-xs hover:bg-emerald-300 transition-all flex items-center gap-1.5 cursor-pointer"
+                >
+                  <span>Order {cloudLinksCount} Cloudstack Links ($${cloudTotalCost})</span>
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* ========================================================================= */}
