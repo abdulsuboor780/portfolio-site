@@ -65,7 +65,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
 
   const handleSendWhatsApp = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
-    if (!formData.name || !formData.email) return;
+    if (!formData.name || !formData.website) return;
 
     setIsSubmitting(true);
     const text = buildInquiryMessage();
@@ -87,7 +87,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
 
   const handleSendEmail = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
-    if (!formData.name || !formData.email) return;
+    if (!formData.name || !formData.website) return;
 
     setIsSubmitting(true);
     const subject = encodeURIComponent(`New SEO Project Inquiry: ${formData.name} (${formData.niche})`);
@@ -231,7 +231,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Name */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-slate-300">Your Full Name *</label>
+                    <label className="text-xs font-semibold text-slate-300 flex items-center gap-1">
+                      <span>Your Full Name</span>
+                      <span className="text-red-500 font-bold">*</span>
+                    </label>
                     <input
                       type="text"
                       required
@@ -244,10 +247,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
 
                   {/* Email */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-slate-300">Your Email Address *</label>
+                    <label className="text-xs font-semibold text-slate-300">
+                      Your Email Address <span className="text-slate-400 font-normal">(Optional)</span>
+                    </label>
                     <input
                       type="email"
-                      required
                       placeholder="e.g. john@business.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -257,26 +261,32 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {/* Website URL */}
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-semibold text-slate-300 flex items-center gap-1">
+                      <span>Website or GBP Link</span>
+                      <span className="text-red-500 font-bold">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. https://mybusiness.com or Business GBP Name"
+                      value={formData.website}
+                      onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                      className="w-full bg-slate-950 text-xs text-white placeholder-slate-500 px-3.5 py-3 rounded-xl border border-slate-800 focus:outline-none focus:border-emerald-500 transition-colors"
+                    />
+                  </div>
+
                   {/* WhatsApp / Phone */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-slate-300">WhatsApp / Phone (Recommended)</label>
+                    <label className="text-xs font-semibold text-slate-300">
+                      WhatsApp / Phone Number <span className="text-slate-400 font-normal">(Optional)</span>
+                    </label>
                     <input
                       type="tel"
                       placeholder="e.g. +1 555 123 4567"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full bg-slate-950 text-xs text-white placeholder-slate-500 px-3.5 py-3 rounded-xl border border-slate-800 focus:outline-none focus:border-emerald-500 transition-colors"
-                    />
-                  </div>
-
-                  {/* Website URL */}
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-slate-300">Website or GBP Link (Optional)</label>
-                    <input
-                      type="text"
-                      placeholder="e.g. https://mybusiness.com"
-                      value={formData.website}
-                      onChange={(e) => setFormData({ ...formData, website: e.target.value })}
                       className="w-full bg-slate-950 text-xs text-white placeholder-slate-500 px-3.5 py-3 rounded-xl border border-slate-800 focus:outline-none focus:border-emerald-500 transition-colors"
                     />
                   </div>
@@ -323,7 +333,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
 
                 {/* Message */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-slate-300">Project Details or Goal</label>
+                  <label className="text-xs font-semibold text-slate-300">
+                    Project Details or Goal <span className="text-slate-400 font-normal">(Optional)</span>
+                  </label>
                   <textarea
                     rows={4}
                     placeholder="Tell Abdul about your city, competitors, current ranking issues, or goals..."

@@ -52,7 +52,7 @@ export const AuditModal: React.FC<AuditModalProps> = ({ isOpen, onClose }) => {
 
   const handleSendWhatsApp = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
-    if (!website || !name || !email) return;
+    if (!website || !name) return;
 
     setIsSubmitting(true);
     const text = buildAuditMessage();
@@ -74,7 +74,7 @@ export const AuditModal: React.FC<AuditModalProps> = ({ isOpen, onClose }) => {
 
   const handleSendEmail = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
-    if (!website || !name || !email) return;
+    if (!website || !name) return;
 
     setIsSubmitting(true);
     const subject = encodeURIComponent(`Free Quick SEO Audit Request (PDF): ${name} (${niche})`);
@@ -210,7 +210,10 @@ export const AuditModal: React.FC<AuditModalProps> = ({ isOpen, onClose }) => {
             {/* Fields */}
             <div className="space-y-3.5">
               <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-300">Website or Google Business Profile Link *</label>
+                <label className="text-xs font-semibold text-slate-300 flex items-center gap-1">
+                  <span>Website or Google Business Profile Link</span>
+                  <span className="text-red-500 font-bold">*</span>
+                </label>
                 <div className="relative">
                   <Globe className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
                   <input
@@ -226,7 +229,10 @@ export const AuditModal: React.FC<AuditModalProps> = ({ isOpen, onClose }) => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-300">Your Name *</label>
+                  <label className="text-xs font-semibold text-slate-300 flex items-center gap-1">
+                    <span>Your Name</span>
+                    <span className="text-red-500 font-bold">*</span>
+                  </label>
                   <input
                     type="text"
                     required
@@ -238,10 +244,11 @@ export const AuditModal: React.FC<AuditModalProps> = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-300">Your Email *</label>
+                  <label className="text-xs font-semibold text-slate-300">
+                    Your Email <span className="text-slate-400 font-normal">(Optional)</span>
+                  </label>
                   <input
                     type="email"
-                    required
                     placeholder="e.g. robert@biz.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -270,7 +277,9 @@ export const AuditModal: React.FC<AuditModalProps> = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-300">WhatsApp / Phone (Fastest Delivery)</label>
+                  <label className="text-xs font-semibold text-slate-300">
+                    WhatsApp / Phone <span className="text-slate-400 font-normal">(Optional)</span>
+                  </label>
                   <input
                     type="tel"
                     placeholder="e.g. +1 555 234 5678"
@@ -298,7 +307,9 @@ export const AuditModal: React.FC<AuditModalProps> = ({ isOpen, onClose }) => {
               </div>
 
               <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-300">Target Competitor or Additional Notes (Optional)</label>
+                <label className="text-xs font-semibold text-slate-300">
+                  Target Competitor or Additional Notes <span className="text-slate-400 font-normal">(Optional)</span>
+                </label>
                 <input
                   type="text"
                   placeholder="e.g. competitors in my area, target cities, or current ranking issues"
