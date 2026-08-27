@@ -64,12 +64,28 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
-  category: 'Local SEO' | 'GBP Optimization' | 'Off-Page SEO' | 'Technical SEO' | 'Conversion Strategy';
+  category: string;
   readTime: string;
-  date: string;
-  coverImage?: string;
+  publishDate: string;
+  featuredImage: string;
+  focusKeyword: string;
+  seoKeywords: string[];
+  metaTitle: string;
+  metaDescription: string;
+  author: {
+    name: string;
+    role: string;
+    avatar: string;
+  };
+  contentImages?: {
+    url: string;
+    alt: string;
+    caption: string;
+  }[];
+  keyTakeaways?: string[];
+  faqSchema?: { question: string; answer: string }[];
   content: string;
-  tags: string[];
+  tags?: string[];
 }
 
 export interface Testimonial {
