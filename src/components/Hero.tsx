@@ -167,7 +167,7 @@ export const Hero: React.FC<HeroProps> = ({
                 {!photoError ? (
                   <div className="w-full h-full relative group">
                     <img
-                      src="/images/portfolio-hero-section.jpg"
+                      src="/images/abdulsuboor-hero.webp"
                       alt={`${PERSONAL_INFO.name} - SEO & Local SEO Specialist`}
                       onError={() => setPhotoError(true)}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

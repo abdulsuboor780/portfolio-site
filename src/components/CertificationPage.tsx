@@ -71,7 +71,7 @@ export const CertificationPage: React.FC<CertificationPageProps> = ({
               {!certImgError ? (
                 <div className="rounded-2xl overflow-hidden border border-slate-800 relative group bg-slate-950 shadow-2xl">
                   <img
-                    src="/images/certificate-sebt-13-Abdul-Suboor.jpg"
+                    src="/images/certificate-sebt-13-Abdul-Suboor.webp"
                     alt={`iSkills Certificate - ${CERTIFICATION_DETAILS.recipient} (Credential ID: ${CERTIFICATION_DETAILS.credentialId})`}
                     onError={() => setCertImgError(true)}
                     className="w-full h-auto object-contain rounded-xl"
