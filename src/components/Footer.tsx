@@ -169,7 +169,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAudit }) => {
               </li>
               <li>
                 <button onClick={onOpenAudit} className="hover:text-emerald-400 transition-colors text-left text-emerald-400 font-bold">
-                  Free 5-Min Local Video Audit
+                  Free Quick Local SEO Audit (PDF)
                 </button>
               </li>
             </ul>

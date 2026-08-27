@@ -146,7 +146,7 @@ export default function App() {
       {/* Floating Interactive WhatsApp Widget */}
       <WhatsAppWidget />
 
-      {/* Free 5-Min Video Audit Modal */}
+      {/* Free Quick SEO Audit (PDF) Modal */}
       <AuditModal
         isOpen={isAuditModalOpen}
         onClose={() => setIsAuditModalOpen(false)}

@@ -39,6 +39,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedDetails, setCopiedDetails] = useState(false);
   const [openFaqIdx, setOpenFaqIdx] = useState<number | null>(0);
 
   const handleCopyEmail = () => {
@@ -47,33 +48,58 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
     setTimeout(() => setCopiedEmail(false), 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Format mailto link to Abdul's Gmail (abdulsuboor780@gmail.com)
-    const subject = encodeURIComponent(`New SEO Project Inquiry: ${formData.name} (${formData.niche})`);
-    const body = encodeURIComponent(
+  const buildInquiryMessage = () => {
+    return (
       `Hi Abdul,\n\n` +
-      `I am interested in your SEO and Local GBP services.\n\n` +
+      `I am interested in your SEO and Local Web services:\n\n` +
       `• Name: ${formData.name}\n` +
       `• Email: ${formData.email}\n` +
       `• WhatsApp/Phone: ${formData.phone || 'Not provided'}\n` +
       `• Website / GBP: ${formData.website || 'Not provided'}\n` +
       `• Business Niche: ${formData.niche}\n` +
       `• Selected Service: ${formData.service}\n` +
-      `• Budget: ${formData.budget}\n` +
-      `• Project Details: ${formData.message}\n\n` +
-      `Looking forward to hearing from you at ${formData.email}.`
+      `• Project Details: ${formData.message || 'Ready to discuss project scope.'}\n\n` +
+      `Looking forward to hearing from you!`
     );
+  };
 
+  const handleSendWhatsApp = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (!formData.name || !formData.email) return;
+
+    setIsSubmitting(true);
+    const text = buildInquiryMessage();
+    const waUrl = `https://wa.me/923365336008?text=${encodeURIComponent(text)}`;
+
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
+
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      confetti({
+        particleCount: 80,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#10b981', '#06b6d4', '#3b82f6'],
+      });
+    }, 600);
+  };
+
+  const handleSendEmail = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (!formData.name || !formData.email) return;
+
+    setIsSubmitting(true);
+    const subject = encodeURIComponent(`New SEO Project Inquiry: ${formData.name} (${formData.niche})`);
+    const body = encodeURIComponent(buildInquiryMessage());
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${PERSONAL_INFO.email}&su=${subject}&body=${body}`;
     const mailtoUrl = `mailto:${PERSONAL_INFO.email}?subject=${subject}&body=${body}`;
 
-    // Open user's default email client or fallback
     try {
-      window.open(mailtoUrl, '_blank');
+      window.open(gmailUrl, '_blank', 'noopener,noreferrer');
     } catch {
-      // ignore popup blocker
+      window.location.href = mailtoUrl;
     }
 
     setTimeout(() => {
@@ -85,7 +111,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
         origin: { y: 0.6 },
         colors: ['#10b981', '#06b6d4', '#3b82f6'],
       });
-    }, 800);
+    }, 600);
+  };
+
+  const handleCopyDetails = () => {
+    navigator.clipboard.writeText(buildInquiryMessage());
+    setCopiedDetails(true);
+    setTimeout(() => setCopiedDetails(false), 2500);
   };
 
   const handleReset = () => {
@@ -141,7 +173,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                 <div className="space-y-2">
                   <h3 className="text-2xl font-black text-white">Inquiry Prepared for Abdul Suboor!</h3>
                   <p className="text-sm text-slate-300 max-w-md mx-auto">
-                    Thank you, <strong className="text-white">{formData.name}</strong>. Your project details have been routed to <strong className="text-emerald-400">{PERSONAL_INFO.email}</strong>. Abdul will review your niche (<span className="text-white">{formData.niche}</span>) and respond within 2-4 hours.
+                    Thank you, <strong className="text-white">{formData.name}</strong>. Your inquiry details for <span className="text-white font-medium">{formData.service}</span> in the <span className="text-emerald-400 font-semibold">{formData.niche}</span> niche are ready to be dispatched.
                   </p>
                 </div>
 
@@ -154,32 +186,46 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                     <span>Target Service:</span>
                     <span className="text-white font-medium">{formData.service}</span>
                   </div>
+                  <div className="flex justify-between items-center text-slate-400">
+                    <span>WhatsApp Direct:</span>
+                    <span className="font-mono text-emerald-400 font-bold">+92 336 5336008</span>
+                  </div>
                 </div>
 
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <a
-                    href={`https://wa.me/923365336008?text=${encodeURIComponent(`Hi Abdul, I just submitted the form for ${formData.service} (${formData.niche}). My name is ${formData.name}.`)}`}
+                    href={`https://wa.me/923365336008?text=${encodeURIComponent(buildInquiryMessage())}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs bg-emerald-400 text-slate-950 hover:bg-emerald-300 transition-all flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs bg-emerald-400 text-slate-950 hover:bg-emerald-300 transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20"
                   >
                     <MessageCircle className="w-4 h-4 fill-slate-950" />
-                    <span>Ping Abdul on WhatsApp to Fast-Track</span>
+                    <span>Send Details to WhatsApp (+92 336 5336008)</span>
                   </a>
 
                   <button
-                    onClick={handleReset}
-                    className="w-full sm:w-auto px-5 py-3.5 rounded-xl font-semibold text-xs text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 transition-colors"
+                    type="button"
+                    onClick={handleCopyDetails}
+                    className="w-full sm:w-auto px-4 py-3.5 rounded-xl font-semibold text-xs text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 transition-colors flex items-center justify-center gap-1.5"
                   >
-                    Send Another Inquiry
+                    {copiedDetails ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                    <span>{copiedDetails ? 'Copied to Clipboard!' : 'Copy Form Details'}</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={handleReset}
+                    className="w-full sm:w-auto px-4 py-3.5 rounded-xl font-semibold text-xs text-slate-400 hover:text-white bg-slate-800/60 hover:bg-slate-800 transition-colors"
+                  >
+                    New Inquiry
                   </button>
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSendWhatsApp} className="space-y-5">
                 <div className="space-y-1">
                   <h3 className="text-xl font-bold text-white">Request a Proposal & Consultation</h3>
-                  <p className="text-xs text-slate-400">Fill in your business details. Submissions are delivered to {PERSONAL_INFO.email}.</p>
+                  <p className="text-xs text-slate-400">Fill in your business details. Send directly via WhatsApp or Email.</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -213,7 +259,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* WhatsApp / Phone */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-slate-300">WhatsApp / Phone Number</label>
+                    <label className="text-xs font-semibold text-slate-300">WhatsApp / Phone (Recommended)</label>
                     <input
                       type="tel"
                       placeholder="e.g. +1 555 123 4567"
@@ -287,25 +333,31 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                   />
                 </div>
 
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl font-black text-sm text-slate-950 bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 hover:shadow-xl hover:shadow-emerald-500/25 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70"
-                >
-                  {isSubmitting ? (
-                    <span>Dispatching to Abdul's Gmail...</span>
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4" />
-                      <span>Submit Inquiry to abdulsuboor780@gmail.com</span>
-                    </>
-                  )}
-                </button>
+                {/* Action Buttons */}
+                <div className="space-y-2.5 pt-2">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full py-4 rounded-xl font-black text-sm text-slate-950 bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 hover:shadow-xl hover:shadow-emerald-500/25 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70"
+                  >
+                    <MessageCircle className="w-4 h-4 fill-slate-950" />
+                    <span>Send Inquiry via WhatsApp (Fastest Response)</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={handleSendEmail}
+                    disabled={isSubmitting}
+                    className="w-full py-3 rounded-xl font-bold text-xs text-emerald-400 hover:text-emerald-300 bg-emerald-950/40 hover:bg-emerald-950/70 border border-emerald-500/30 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    <Mail className="w-3.5 h-3.5" />
+                    <span>Or Send Details via Email (Gmail / Mail Client)</span>
+                  </button>
+                </div>
 
                 <p className="text-center text-[11px] text-slate-400 flex items-center justify-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Submissions are received directly by Abdul Suboor. Zero spam guaranteed.</span>
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>Inquiries are delivered directly to Abdul Suboor (+92 336 5336008). Zero spam guaranteed.</span>
                 </p>
               </form>
             )}

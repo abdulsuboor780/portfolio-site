@@ -262,13 +262,13 @@ export const CertificationPage: React.FC<CertificationPageProps> = ({
             <div className="rounded-3xl bg-gradient-to-br from-emerald-950/50 to-slate-950 border border-emerald-500/30 p-6 text-center space-y-3">
               <h4 className="text-sm font-bold text-white">Work With a Certified Expert</h4>
               <p className="text-xs text-slate-300">
-                Get a free video audit of your Google Business Profile and local keywords.
+                Get a free Quick Audit Report in PDF of your Google Business Profile and local rankings.
               </p>
               <button
                 onClick={onOpenAudit}
                 className="w-full py-3 rounded-xl font-extrabold text-xs bg-emerald-400 text-slate-950 hover:bg-emerald-300 transition-all flex items-center justify-center gap-1.5"
               >
-                <span>Claim Free Local Audit</span>
+                <span>Claim Free Quick Audit (PDF)</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>

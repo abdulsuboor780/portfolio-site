@@ -163,7 +163,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onOpenAudit }) => 
                 onClick={onOpenAudit}
                 className="w-full py-3.5 px-5 rounded-xl font-extrabold text-sm text-slate-950 bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 hover:shadow-lg hover:shadow-emerald-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
               >
-                <span>Claim Your Free Video SEO Audit to Unlock This</span>
+                <span>Claim Your Free Quick SEO Audit Report (PDF)</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

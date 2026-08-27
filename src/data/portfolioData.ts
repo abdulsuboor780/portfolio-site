@@ -677,9 +677,9 @@ export const FAQS: FAQ[] = [
   },
   {
     category: 'Free Audit',
-    question: 'What is included in the Free Audit for Local Businesses?',
+    question: 'What is included in the Free Quick SEO & GBP Audit (PDF)?',
     answer:
-      'Abdul provides a 100% free, personalized audit of your Google Business Profile, keyword rankings, local competitor gaps, and website speed. You can submit the form or send your business name and city directly on WhatsApp (+92 336 5336008) to receive your actionable breakdown.',
+      'Abdul provides a 100% free, personalized Quick Audit Report (PDF) covering your Google Business Profile, local keyword rankings, competitor gaps, and site speed. If you agree with the findings and strategic plan, you can schedule an online meeting or finalize the deal directly via WhatsApp (+92 336 5336008) or Email.',
   },
   {
     category: 'Niches',
