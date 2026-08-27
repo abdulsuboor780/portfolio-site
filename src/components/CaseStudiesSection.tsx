@@ -24,7 +24,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenAu
   const activeCase = CASE_STUDIES.find((c) => c.id === selectedCaseId) || CASE_STUDIES[0];
 
   return (
-    <section id="case-studies" className="py-16 sm:py-24 relative bg-slate-950/60">
+    <section id="case-studies" className="py-16 sm:py-24 relative bg-slate-950/60 overflow-hidden">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
@@ -258,20 +258,20 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenAu
                   </p>
                 </div>
 
-                <div className="flex items-center justify-between pt-3 border-t border-slate-800/80">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-800/80">
                   <div className="flex items-center gap-3">
                     <img
                       src={t.avatar}
                       alt={t.name}
                       referrerPolicy="no-referrer"
-                      className="w-10 h-10 rounded-full object-cover border border-slate-700"
+                      className="w-10 h-10 rounded-full object-cover border border-slate-700 shrink-0"
                     />
                     <div>
                       <h5 className="text-xs font-bold text-white">{t.name}</h5>
                       <p className="text-[11px] text-slate-400">{t.role}, {t.company}</p>
                     </div>
                   </div>
-                  <div className="text-right">
+                  <div className="text-left sm:text-right">
                     <span className="text-[10px] text-slate-500 font-mono block">{t.location}</span>
                     <span className="text-[10px] text-emerald-400 font-semibold">{t.service}</span>
                   </div>
@@ -285,7 +285,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenAu
         <div className="text-center pt-4">
           <button
             onClick={onOpenAudit}
-            className="px-6 py-3.5 rounded-xl font-bold text-sm text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-lg shadow-emerald-500/20"
+            className="w-full sm:w-auto px-4 sm:px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-lg shadow-emerald-500/20 text-center cursor-pointer"
           >
             Want Results Like These for Your Business? Request a Free Audit &rarr;
           </button>

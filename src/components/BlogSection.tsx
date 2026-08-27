@@ -24,6 +24,44 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onOpenAudit }) => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeArticle, setActiveArticle] = useState<BlogPost | null>(null);
 
+  // Generate Article JSON-LD Structured Data for Blog Posts
+  const articlesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'itemListElement': BLOG_POSTS.map((post, idx) => ({
+      '@type': 'ListItem',
+      'position': idx + 1,
+      'item': {
+        '@type': 'BlogPosting',
+        '@id': `https://abdulsuboor.com/#blog-${post.id}`,
+        'headline': post.title,
+        'description': post.excerpt,
+        'articleBody': post.content.trim(),
+        'datePublished': post.date,
+        'dateModified': post.date,
+        'author': {
+          '@type': 'Person',
+          'name': PERSONAL_INFO.name,
+          'url': 'https://abdulsuboor.com/',
+          'sameAs': [
+            'https://www.linkedin.com/in/abdul-suboor/',
+            'https://www.facebook.com/abd.suboor/'
+          ]
+        },
+        'publisher': {
+          '@type': 'Person',
+          'name': PERSONAL_INFO.name,
+          'url': 'https://abdulsuboor.com/'
+        },
+        'keywords': post.tags.join(', '),
+        'mainEntityOfPage': {
+          '@type': 'WebPage',
+          '@id': `https://abdulsuboor.com/#blog`
+        }
+      }
+    }))
+  };
+
   const categories = ['all', 'Local SEO', 'GBP Optimization', 'Off-Page SEO', 'Conversion Strategy'];
 
   const filteredPosts = BLOG_POSTS.filter((post) => {
@@ -37,6 +75,12 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onOpenAudit }) => {
 
   return (
     <section id="blog" className="py-16 sm:py-24 relative">
+      {/* Blog Posting Structured Data (JSON-LD) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articlesSchema) }}
+      />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}

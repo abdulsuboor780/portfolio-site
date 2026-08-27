@@ -9,7 +9,10 @@ import {
   Heart, 
   ShieldCheck,
   MapPin,
-  ArrowUp
+  ArrowUp,
+  Linkedin,
+  Facebook,
+  ExternalLink
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
@@ -112,11 +115,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAudit }) => {
               Helping local business owners, clinics, remodelers, solar installers, and contractors dominate Google 3-Pack rankings and boost organic phone inquiries.
             </p>
 
-            <div className="pt-1 flex items-center gap-3">
+            <div className="pt-1 flex flex-wrap items-center gap-2.5">
               <a
                 href={PERSONAL_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="WhatsApp Contact"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-emerald-950 text-emerald-400 border border-emerald-500/30 text-xs font-semibold transition-all"
               >
                 <MessageCircle className="w-3.5 h-3.5" />
@@ -125,10 +129,33 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAudit }) => {
 
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
+                aria-label="Email Contact"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-semibold transition-all"
               >
                 <Mail className="w-3.5 h-3.5" />
-                <span>abdulsuboor780@gmail.com</span>
+                <span>Email</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/abdul-suboor/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abdul Suboor LinkedIn Profile"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-blue-950/60 text-blue-400 border border-blue-500/30 text-xs font-semibold transition-all group"
+              >
+                <Linkedin className="w-3.5 h-3.5 fill-blue-400 group-hover:scale-110 transition-transform" />
+                <span>LinkedIn</span>
+              </a>
+
+              <a
+                href="https://www.facebook.com/abd.suboor/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abdul Suboor Facebook Profile"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-indigo-950/60 text-indigo-400 border border-indigo-500/30 text-xs font-semibold transition-all group"
+              >
+                <Facebook className="w-3.5 h-3.5 fill-indigo-400 group-hover:scale-110 transition-transform" />
+                <span>Facebook</span>
               </a>
             </div>
           </div>
@@ -239,7 +266,27 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAudit }) => {
             &copy; {new Date().getFullYear()} Abdul Suboor. All rights reserved. Built for high performance & local search conversion.
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
+            <a
+              href="https://www.linkedin.com/in/abdul-suboor/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-1"
+            >
+              <Linkedin className="w-3.5 h-3.5" />
+              <span>LinkedIn</span>
+            </a>
+
+            <a
+              href="https://www.facebook.com/abd.suboor/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-indigo-400 transition-colors flex items-center gap-1"
+            >
+              <Facebook className="w-3.5 h-3.5" />
+              <span>Facebook</span>
+            </a>
+
             <button
               onClick={scrollToTop}
               className="inline-flex items-center gap-1 text-slate-400 hover:text-emerald-400 transition-colors"

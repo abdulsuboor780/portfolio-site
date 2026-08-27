@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Allow crawling of all resources including stylesheets, scripts, and imagery
+Allow: /images/
+Allow: /assets/
+
+# XML Sitemap
+Sitemap: https://abdulsuboor.com/sitemap.xml

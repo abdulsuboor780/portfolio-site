@@ -11,6 +11,8 @@ export const PERSONAL_INFO = {
   whatsappFormatted: '+92 336 5336008',
   whatsappUrl: 'https://wa.me/923365336008',
   email: 'abdulsuboor780@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/abdul-suboor/',
+  facebook: 'https://www.facebook.com/abd.suboor/',
   location: 'Serving US, UK, Canada, Australia & Worldwide Local Businesses',
   stats: [
     { label: 'Years Experience', value: '3+' },

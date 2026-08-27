@@ -135,10 +135,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-24 relative bg-slate-950/70">
+    <section id="contact" className="py-16 sm:py-24 relative bg-slate-950/70 overflow-hidden">
       
       {/* Background glow */}
-      <div className="absolute top-1/4 right-10 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         

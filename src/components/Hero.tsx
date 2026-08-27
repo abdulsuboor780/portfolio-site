@@ -94,26 +94,26 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
 
             {/* CTAs: WhatsApp FIRST, then Free Audit Form */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2 w-full">
               <a
                 href={`https://wa.me/923365336008?text=${encodeURIComponent('Hi Abdul, I want to talk about SEO, GBP Optimization, Web Development, and local rankings for my business.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="hero-whatsapp-cta"
-                className="w-full sm:w-auto relative group overflow-hidden px-6 py-4 rounded-xl font-extrabold text-sm text-slate-950 bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 cursor-pointer"
+                className="w-full sm:w-auto relative group overflow-hidden px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl font-extrabold text-xs sm:text-sm text-slate-950 bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
-                <MessageCircle className="w-5 h-5 fill-slate-950" />
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-slate-950 shrink-0" />
                 <span>Chat on WhatsApp: +92 336 5336008</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />
                 <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
               </a>
 
               <button
                 onClick={onOpenAudit}
                 id="hero-book-audit-cta"
-                className="w-full sm:w-auto px-6 py-4 rounded-xl font-bold text-sm text-emerald-400 bg-slate-900/90 hover:bg-slate-800/90 border border-emerald-500/30 hover:border-emerald-500/60 transition-all flex items-center justify-center gap-2.5 group cursor-pointer"
+                className="w-full sm:w-auto px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl font-bold text-xs sm:text-sm text-emerald-400 bg-slate-900/90 hover:bg-slate-800/90 border border-emerald-500/30 hover:border-emerald-500/60 transition-all flex items-center justify-center gap-2 group cursor-pointer"
               >
-                <Sparkles className="w-4 h-4 text-emerald-400 group-hover:rotate-12 transition-transform" />
+                <Sparkles className="w-4 h-4 text-emerald-400 group-hover:rotate-12 transition-transform shrink-0" />
                 <span>Free Audit for Local Business</span>
               </button>
             </div>
